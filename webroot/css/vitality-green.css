@@ -196,7 +196,8 @@ h6 {
   text-decoration: none;
   opacity: 1;
   color: white;
-  margin-left: 16px;
+ /* margin-left: 16px;*/
+  margin-left: -106px;
   -webkit-transition: all .5s;
   -moz-transition: all .5s;
   transition: all .5s;
@@ -207,9 +208,21 @@ h6 {
 #mainNav .navbar-brand img {
   height: 40px;
 }
+
 #mainNav .navbar-collapse .navbar-nav > .nav-item > .nav-link {
   padding: 15px;
   color: white;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+#headerNavbarResponsive.navbar-collapse .navbar-nav > .nav-item > .nav-link {
+  padding: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: white;
+  font-size: 1.4rem;
+
 }
 #mainNav .navbar-collapse .navbar-nav > .nav-item > .nav-link:hover,
 #mainNav .navbar-collapse .navbar-nav > .nav-item > .nav-link:focus {
@@ -245,10 +258,21 @@ h6 {
   #mainNav .navbar-collapse .navbar-nav > .nav-item > .nav-link.active,
   #mainNav .navbar-collapse .navbar-nav > .nav-item > .nav-link.active:hover,
   #mainNav .navbar-collapse .navbar-nav > .nav-item > .nav-link.active:focus {
+
+    color: #5CB85C;
+    border-radius: 0;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+  }
+
+  #headerNavbarResponsive.navbar-collapse .navbar-nav > .nav-item > .nav-link.main-active{
     color: #5CB85C;
     border-radius: 0;
     background-color: white;
     border-radius: 5px;
+
+    border-bottom-style: none;
+    border-bottom-width: 0px;
   }
 }
 header.masthead {
