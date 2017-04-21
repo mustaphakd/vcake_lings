@@ -38,9 +38,11 @@ $cakeDescription = 'Vegan Healings for all your natural vegan healings informati
 
     <!-- Plugin CSS -->
     <?= $this->Html->css('/vendor/font-awesome/css/font-awesome.min.css') ?>
-    <?= $this->Html->css('/vendor/owl-carousel/owl.carousel.css') ?>
-    <?= $this->Html->css('/vendor/owl-carousel/owl.theme.css') ?>
+
+    <?= $this->Html->css('/vendor/owl-carousel/assets/owl.carousel.css') ?>
+    <?= $this->Html->css('/vendor/owl-carousel/assets/owl.theme.css') ?>
     <?= $this->Html->css('/vendor/owl-carousel/owl.transitions.css') ?>
+
     <?= $this->Html->css('/vendor/magnific-popup/magnific-popup.css') ?>
     <?= $this->Html->css('/vendor/animate.css/animate.min.css') ?>
     <?= $this->Html->css('/device-mockups/device-mockups.min.css') ?>
@@ -75,7 +77,8 @@ $cakeDescription = 'Vegan Healings for all your natural vegan healings informati
             Menu <i class="fa fa-bars"></i>
         </button>
         <a class="navbar-brand page-scroll" href="#page-top">
-            <img class="img-fluid" src="img/agency/logo.svg" alt="">
+            <!-- <img class="img-fluid" src="img/agency/logo.svg" alt="">-->
+            <?= $this->Html->image('agency/logo.svg', ["class" => "img-fluid"] ) ?>
         </a>
 
         <div class="collapse navbar-collapse " id="headerNavbarResponsive">
@@ -88,10 +91,10 @@ $cakeDescription = 'Vegan Healings for all your natural vegan healings informati
                     <a class="nav-link <?php echo (!isset($mainActive) || strtolower($mainActive) === "home")?  "main-active" : ""  ?>" href="#home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php echo (isset($mainActive) || strtolower($mainActive) === "events")?  "main-active" : ""  ?> " href="#events">Event</a>
+                    <a class="nav-link <?php echo (isset($mainActive) && strtolower($mainActive) === "events")?  "main-active" : ""  ?> " href="#events">Event</a>
                 </li>
                 <!--<li class="nav-item">
-                    <a class="nav-link <?php echo (isset($mainActive) || strtolower($mainActive) === "boutique")?  "main-active" : ""  ?> " href="#boutique">Store</a>
+                    <a class="nav-link < ?php echo (isset($mainActive) && strtolower($mainActive) === "boutique")?  "main-active" : ""  ?> " href="#boutique">Store</a>
                 </li> -->
             </ul>
         </div>
@@ -113,19 +116,22 @@ $cakeDescription = 'Vegan Healings for all your natural vegan healings informati
 <?= $this->Flash->render() ?>
 
  <?= $this->fetch('content') ?>
-
-
-
-<?= $this->Html->script([
-    '/vendor/jquery/jquery.min',
-    '/vendor/tether/tether.min',
-    '/vendor/bootstrap/js/bootstrap.min' ])
-?>
-
+<!-- //'/vendor/owl-carousel/owl.carousel', -->
 <!-- Plugin JavaScript -->
+
+
+<?php if ($this->fetch('jquery')): ?>
+    <?= $this->fetch('jquery') ?>
+<?php else: ?>
+    <?= $this->Html->script('/vendor/jquery/jquery_3_2_1.min') ?>
+<?php endif ?>
+
+
 <?= $this->Html->script([
+    '/vendor/tether/tether.min',
+    '/vendor/bootstrap/js/bootstrap.min',
     '/vendor/jquery.easing/jquery.easing.min',
-    '/vendor/owl-carousel/owl.carousel',
+
     '/vendor/magnific-popup/jquery.magnific-popup.min',
     '/vendor/vide/jquery.vide.min',
     '/vendor/mixitup/mixitup.min',
@@ -141,6 +147,8 @@ $cakeDescription = 'Vegan Healings for all your natural vegan healings informati
 <?= $this->Html->script([
     'vitality' ])
 ?>
+
+<?= $this->fetch('scriptBottom') ?>
 <!-- build:remove:dist -->
 
 <script>
@@ -160,7 +168,7 @@ $cakeDescription = 'Vegan Healings for all your natural vegan healings informati
     ga('send', 'pageview');*/
 </script>
 
-<?= $this->fetch('scriptBottom') ?>
+
 </body>
 
 </html>

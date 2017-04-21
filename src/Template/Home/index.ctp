@@ -18,7 +18,7 @@ $this->set(
     "pricing" => "Pricing",
     "contact" => "Contact"];*/
 
-$this->set('mainActive', "events");
+$this->set('mainActive', "home");
 
 ?>
 <!-- Masthead -->
