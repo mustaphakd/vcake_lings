@@ -31,7 +31,7 @@ $this->set('mainActive', "events");
     <!-- CSS Implementing Plugins -->
     <?= $this->Html->css('/vendor/animate.css/animate.css', ['block' => true]) ?>
     <?= $this->Html->css('/vendor/line-icons/line-icons.css', ['block' => true]) ?>
-    < ?= $this->Html->css('/vendor/owl-carousel/assets/owl.carousel.css') ?>
+    <?= $this->Html->css('/vendor/owl-carousel/assets/owl.carousel.css') ?>
     <?= $this->Html->css('/vendor/slick/slick.css', ['block' => true]) ?>
     <?= $this->Html->css('/vendor/fancybox/jquery.fancybox.css', ['block' => true]) ?>
 

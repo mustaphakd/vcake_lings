@@ -81,35 +81,48 @@ $cakeDescription = 'Vegan Healings for all your natural vegan healings informati
             <?= $this->Html->image('agency/logo.svg', ["class" => "img-fluid"] ) ?>
         </a>
 
-        <div class="collapse navbar-collapse " id="headerNavbarResponsive">
-        <?php if (isset($submenues)): ?>
-            <ul class="navbar-nav ml-auto">
-        <?php else: ?>
-            <ul class="navbar-nav offset-md-2">
-        <?php endif; ?>
-                <li class="nav-item">
-                    <a class="nav-link <?php echo (!isset($mainActive) || strtolower($mainActive) === "home")?  "main-active" : ""  ?>" href="#home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link <?php echo (isset($mainActive) && strtolower($mainActive) === "events")?  "main-active" : ""  ?> " href="#events">Event</a>
-                </li>
-                <!--<li class="nav-item">
-                    <a class="nav-link < ?php echo (isset($mainActive) && strtolower($mainActive) === "boutique")?  "main-active" : ""  ?> " href="#boutique">Store</a>
-                </li> -->
-            </ul>
-        </div>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
 
-        <?php if (isset($submenues)): ?>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <?php foreach ($submenues as $val => $display): ?>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#<?= $val ?>"><?= $display ?></a>
-                </li>
-                <?php endforeach; ?>
-            </ul>
-        </div>
-        <?php endif; ?>
+                <?php if (isset($submenues)): ?>
+                <ul class="navbar-nav ml-auto caution-right" id="headerNavbarResponsive" style=" ">
+                    <?php else: ?>
+                    <ul class="navbar-nav offset-md-5" id="headerNavbarResponsive">
+                        <?php endif; ?>
+                        <li class="nav-item">
+                            <a class="nav-link <?php echo (!isset($mainActive) || strtolower($mainActive) === "home")?  "main-active" : ""  ?>" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link <?php echo (isset($mainActive) && strtolower($mainActive) === "events")?  "main-active" : ""  ?> " href="#events">Event</a>
+                        </li>
+                        <!--<li class="nav-item">
+                            <a class="nav-link < ?php echo (isset($mainActive) && strtolower($mainActive) === "boutique")?  "main-active" : ""  ?> " href="#boutique">Store</a>
+                        </li> -->
+                    </ul>
+
+                <?php if (isset($submenues)): ?>
+                <ul class="navbar-nav ml-auto">
+                    <?php foreach ($submenues as $val => $display): ?>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#<?= $val ?>"><?= $display ?></a>
+                    </li>
+                    <?php endforeach; ?>
+                </ul>
+                <?php endif; ?>
+
+
+                <ul class="navbar-nav ml-auto auth-controls-container" id="authstatus">
+                        <?= $this->Html->link(
+                            '<i class="fa fa-sign-in fa-2x" aria-hidden="true" title="login"></i>',
+                            '/login',
+                            ['class' => 'authcontrols img-fluid offset-md-11', 'escapeTitle' => false])
+                        ?>
+                </ul>
+            </div>
+
+
+
+
+
     </div>
 </nav>
 

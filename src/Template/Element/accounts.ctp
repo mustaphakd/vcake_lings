@@ -18,8 +18,8 @@
 <!-- CSS Page Style -->
 <?= $this->Html->css('accounts/page_log_reg_v4.css', ['block' => true]) ?>
 
-<!-- CSS Theme -->
-<?= $this->Html->css('accounts/blue.css', ['block' => true]) ?>
+<!-- CSS Theme
+< ?= $this->Html->css('accounts/blue.css', ['block' => true]) ?>-->
 
 <?php
 $this->Html->scriptStart(['block' => true]);
@@ -39,50 +39,9 @@ $this->Html->scriptEnd();
 
         <div class="col-md-6 col-sm-6 form-block equal-height-column">
             <a href="<?= \Cake\Routing\Router::url(['controller' => 'home', 'action' => 'index', 'prefix' => false])?>">
-                <?= $this->Html->image('accounts/logo1-blue.png', ['alt' => ' ']) ?>
+                <?= $this->Html->image('accounts/logo1-green.png', ['alt' => ' ']) ?>
             </a>
-            <h2 class="margin-bottom-30">Login To Your Account</h2>
-            <form action="#">
-                <div class="login-block">
-                    <div class="input-group margin-bottom-20">
-                        <span class="input-group-addon rounded-left"><i class="icon-user color-blue"></i></span>
-                        <input type="text" class="form-control rounded-right" placeholder="User" style="display: none">
-                        <input type="text" class="form-control rounded-right" placeholder="Username">
-                    </div>
-
-                    <div class="input-group margin-bottom-20">
-                        <span class="input-group-addon rounded-left"><i class="icon-lock color-blue"></i></span>
-                        <input type="password" class="form-control rounded-right" placeholder="Password" style="display: none">
-                        <input type="password" class="form-control rounded-right" placeholder="Password">
-                    </div>
-
-                    <div class="checkbox">
-                        <ul class="list-inline">
-                            <li>
-                                <label>
-                                    <input type="checkbox"> Remember me
-                                </label>
-                            </li>
-
-                            <li class="pull-right">
-                                <a href="#">Forgot password?</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="row margin-bottom-70">
-                        <div class="col-md-12">
-                            <button type="submit" class="btn-u btn-u-blue btn-block rounded">Sign In</button>
-                        </div>
-                    </div>
-
-                    <div class="social-login text-center">
-                        <div class="or rounded-x">
-                            <p>Don't have an account? <a href="page_registration2.html">Create New</a></p>
-                        </div>
-                    </div>
-                </div>
-            </form>
+            <?= $view_data ?>
         </div>
     </div>
 </div><!--/container-->
@@ -91,9 +50,9 @@ $this->Html->scriptEnd();
 <!--=== Sticky Footer ===-->
 <div class="container sticky-footer">
     <ul class="list-unstyled list-inline social-links margin-bottom-20">
-        <li><a href="#"><i class="icon-custom icon rounded-x icon-bg-blue fa fa-facebook"></i></a></li>
-        <li><a href="#"><i class="icon-custom icon rounded-x icon-bg-blue fa fa-twitter"></i></a></li>
-        <li><a href="#"><i class="icon-custom icon rounded-x icon-bg-blue fa fa-google-plus"></i></a></li>
+        <li><a href="#"><i class="icon-custom icon rounded-x icon-bg-u fa fa-facebook"></i></a></li>
+        <li><a href="#"><i class="icon-custom icon rounded-x icon-bg-u fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="icon-custom icon rounded-x icon-bg-u fa fa-google-plus"></i></a></li>
     </ul>
     <p class="copyright-space">
         <?= date("Y") ?> &copy; All Rights Reserved. vHealings by <a href="#">worosoft.com</a>

@@ -5,9 +5,10 @@ use Cake\Core\Configure;
 use Cake\Network\Exception\ForbiddenException;
 use Cake\Network\Exception\NotFoundException;
 use Cake\View\Exception\MissingTemplateException;
+use Wrsft\Controller\WrsftBaseController;
 
 
-class AccountsController extends AppController
+class AccountsController extends WrsftBaseController
 {
 
     /*
@@ -22,7 +23,7 @@ class AccountsController extends AppController
      *
      *
      * **/
-    public function register($registrationToken, $partnerToken){
+    public function register($registrationToken = null, $partnerToken = null){
 
     }
 

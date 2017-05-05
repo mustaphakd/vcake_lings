@@ -13,10 +13,16 @@
 
     <!-- Add any additional test suites you want to run here -->
     <testsuites>
-        <testsuite name="App Test Suite">
+        <!--<testsuite name="App Test Suite">
             <directory>./tests/TestCase</directory>
         </testsuite>
-        <!-- Add plugin test suites here. -->
+         Add plugin test suites here. -->
+        <testsuite name="mustaphakd cakephp Utilities">
+            <directory>./plugins/mustaphakd/cakephp-Utilities/tests/TestCase</directory>
+        </testsuite>
+        <testsuite name="mustaphakd cakephp UsersManager">
+            <directory>./plugins/mustaphakd/cakephp-UsersManager/tests/TestCase</directory>
+        </testsuite>
     </testsuites>
 
     <!-- Setup a listener for fixtures -->
