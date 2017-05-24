@@ -43,6 +43,16 @@ use Cake\Routing\Route\DashedRoute;
  */
 Router::defaultRouteClass(DashedRoute::class);
 
+
+
+Router::scope('/events', function (RouteBuilder $routes){
+    $routes->connect('/', ['controller' => 'Home', 'action' => 'events']);
+    $routes->connect('/:action/*', ['controller' => 'Events']);
+});
+
+
+
+
 Router::scope('/', function (RouteBuilder $routes) {
     /**
      * Here, we are connecting '/' (base path) to a controller called 'Pages',
@@ -52,7 +62,7 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/', ['controller' => 'Home', 'action' => 'index']);
 
     $routes->connect('/login', ['controller' => 'Accounts', 'action' => 'index']);
-    $routes->connect('/register', ['controller' => 'Accounts', 'action' => 'register']);
+    //$routes->connect('/register', ['controller' => 'Accounts', 'action' => 'register']);
 
     /**
      * ...and connect the rest of 'Pages' controller's URLs.
@@ -77,11 +87,10 @@ Router::scope('/', function (RouteBuilder $routes) {
      */
     $routes->fallbacks(DashedRoute::class);
 });
-
-Router::scope('/events', function (RouteBuilder $routes){
-   $routes->connect('/', ['controller' => 'Home', 'action' => 'events']);
-    $routes->connect('/:action/*', ['controller' => 'Events']);
-});
+/*
+Router::scope('/register', ['plugin' => 'mustaphakd/cakephp-UsersManager'],function (RouteBuilder $routes){
+    $routes->connect('/', ['controller' => 'Accounts', 'action' => 'register']);
+});*/
 
 /**
  * Load all plugin routes.  See the Plugin documentation on

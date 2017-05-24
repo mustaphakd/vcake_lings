@@ -6,38 +6,58 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7769853a-614e-4dca-9e0f-87dec91f8b74" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Controller/AccountsCountroller.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Controller/Component/WrsftAuthComponent.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Controller/WrsftBaseController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Model/Entity/UserEntity.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Model/Table/RolesTable.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Model/Table/RolesUsersTable.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Model/Table/UsersTable.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/Fixture/RolesFixture.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/Fixture/RolesUsersFixture.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/Fixture/UsersFixture.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/TestCase/Controller/Component/WrsftAuthComponentTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/TestCase/Model/Table/UsersTableTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Controller/Component/EmailComponent.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/tests/TestCase/Controller/Component/EmailComponentTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/tests/TestCase/Controller/Component/MailTransportMock.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Template/Accounts/forgotPassword.ctp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Template/Accounts/message.ctp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Template/Accounts/resetPassword.ctp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Template/Accounts/index2.ctp" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/blade.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/php.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Entity/EventEntity.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Entity/EventRegistrationEntity.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Entity/EventResellerEntity.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Entity/TimeLineEntity.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/EventRegistrationsTable.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/EventsResellersTable.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/EventsTable.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/EventsTimeLinesTable.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/TimeLinesTable.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/config/routes.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Template/Accounts/register.ctp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/TestCase/Controller/AccountsControllerTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/Routing/Route/WyswygtRoute.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Controller/Component/PackagerComponent.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Controller/Component/SslCryptorComponent.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Model/Entity/ImageEntity.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Model/Entity/LocationEntity.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Model/Entity/TableMapperEntity.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Model/Entity/TagEntity.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Model/Table/ImagesTable.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Model/Table/LocationsTable.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Model/Table/TableMappersTable.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Model/Table/TagsTable.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/tests/Fixture/ImagesFixture.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/tests/Fixture/LocationFixture.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/tests/Fixture/TableMapperFixture.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/tests/Fixture/TagsFixture.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/tests/TestCase/Controller/Component/SslCryptorComponentTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Template/Accounts/login.ctp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Controller/AccountsCountroller.php" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Controller/AccountsController.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Template/Accounts/forgotPassword.ctp" afterPath="$PROJECT_DIR$/src/Template/Accounts/forgot_password.ctp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Template/Accounts/resetPassword.ctp" afterPath="$PROJECT_DIR$/src/Template/Accounts/reset_password.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Vhealings.iml" afterPath="$PROJECT_DIR$/.idea/Vhealings.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/bootstrap.php" afterPath="$PROJECT_DIR$/config/bootstrap.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.php" afterPath="$PROJECT_DIR$/config/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phpunit.xml.dist" afterPath="$PROJECT_DIR$/phpunit.xml.dist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/AccountsController.php" afterPath="$PROJECT_DIR$/src/Controller/AccountsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template/Accounts/index.ctp" afterPath="$PROJECT_DIR$/src/Template/Accounts/index.ctp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template/Accounts/register.ctp" afterPath="$PROJECT_DIR$/src/Template/Accounts/register.ctp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template/Element/accounts.ctp" afterPath="$PROJECT_DIR$/src/Template/Element/accounts.ctp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template/Home/events.ctp" afterPath="$PROJECT_DIR$/src/Template/Home/events.ctp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template/Layout/default.ctp" afterPath="$PROJECT_DIR$/src/Template/Layout/default.ctp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webroot/css/accounts/page_log_reg_v4.css" afterPath="$PROJECT_DIR$/webroot/css/accounts/page_log_reg_v4.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webroot/css/vitality-green.css" afterPath="$PROJECT_DIR$/webroot/css/vitality-green.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Controller/Component/WrsftAuthComponent.php" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Controller/Component/WrsftAuthComponent.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Controller/WrsftBaseController.php" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Controller/WrsftBaseController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Model/Entity/UserEntity.php" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Model/Entity/UserEntity.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Model/Table/RolesTable.php" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Model/Table/RolesTable.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Model/Table/UsersTable.php" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Model/Table/UsersTable.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/Fixture/RolesFixture.php" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/Fixture/RolesFixture.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/Fixture/RolesUsersFixture.php" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/Fixture/RolesUsersFixture.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/Fixture/UsersFixture.php" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/Fixture/UsersFixture.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/TestCase/Controller/Component/WrsftAuthComponentTest.php" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/TestCase/Controller/Component/WrsftAuthComponentTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/TestCase/Model/Table/UsersTableTest.php" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/TestCase/Model/Table/UsersTableTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Controller/Component/EmailComponent.php" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Controller/Component/EmailComponent.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/tests/TestCase/Controller/Component/MailTransportMock.php" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/tests/TestCase/Controller/Component/MailTransportMock.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template/Accounts/message.ctp" afterPath="$PROJECT_DIR$/src/Template/Accounts/message.ctp" />
     </list>
     <ignored path="vhealings.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,6 +69,12 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" show_ignored="true" />
+  <component name="ComposerSettings">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <pharPath>C:\ProgramData\ComposerSetup\bin\composer.phar</pharPath>
+    <phpPath>php.exe</phpPath>
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -57,111 +83,7 @@
     <favorites_list name="Vhealings" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UsersTableTest.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/TestCase/Model/Table/UsersTableTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
-              <caret line="109" column="28" selection-start-line="109" selection-start-column="28" selection-end-line="109" selection-end-column="28" />
-              <folding>
-                <element signature="e#129#167#0#PHP" expanded="true" />
-                <element signature="e#550#1566#0#PHP" expanded="false" />
-                <element signature="e#1572#1772#0#PHP" expanded="false" />
-                <marker date="1494026972959" expanded="false" signature="1809:2483" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UsersFixture.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/Fixture/UsersFixture.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="61" column="95" selection-start-line="61" selection-start-column="95" selection-end-line="61" selection-end-column="111" />
-              <folding>
-                <element signature="e#117#153#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WrsftAuthComponent.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Controller/Component/WrsftAuthComponent.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
-              <folding>
-                <element signature="e#7#90#0#PHP" expanded="true" />
-                <element signature="e#132#176#0#PHP" expanded="true" />
-                <element signature="e#840#1071#0#PHP" expanded="false" />
-                <element signature="e#1077#1585#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UsersTable.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Model/Table/UsersTable.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
-              <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
-              <folding>
-                <element signature="e#119#156#0#PHP" expanded="true" />
-                <element signature="e#1009#1129#0#PHP" expanded="false" />
-                <element signature="e#1134#1242#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Query.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/ORM/Query.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-493">
-              <caret line="277" column="17" selection-start-line="277" selection-start-column="17" selection-end-line="277" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthComponent.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="603">
-              <caret line="836" column="6" selection-start-line="836" selection-start-column="6" selection-end-line="836" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseAuthenticate.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/Auth/BaseAuthenticate.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="144" column="25" selection-start-line="144" selection-start-column="25" selection-end-line="144" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WrsftAuthComponentTest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/TestCase/Controller/Component/WrsftAuthComponentTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
-              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-              <folding>
-                <element signature="e#141#180#0#PHP" expanded="true" />
-                <element signature="e#1033#1234#0#PHP" expanded="false" />
-                <element signature="e#1240#1473#0#PHP" expanded="false" />
-                <element signature="e#1479#1745#0#PHP" expanded="false" />
-                <element signature="e#1853#1957#0#PHP" expanded="false" />
-                <element signature="e#1963#2404#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -169,57 +91,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Template/Home/index.ctp" />
-        <option value="$PROJECT_DIR$/webroot/css/event.style.css" />
-        <option value="$PROJECT_DIR$/webroot/vendor/owl-carousel/owl.carousel.min.js" />
-        <option value="$PROJECT_DIR$/webroot/js/plugins/gmaps-ini.js" />
-        <option value="$PROJECT_DIR$/webroot/vendor/bootstrap/css/bootstrap_v2.min.css" />
-        <option value="$PROJECT_DIR$/webroot/vendor/owl-carousel/assets/owl.carousel.css" />
-        <option value="$PROJECT_DIR$/webroot/css/blocks.css" />
-        <option value="$PROJECT_DIR$/webroot/js/one.app.js" />
-        <option value="$PROJECT_DIR$/webroot/js/vitality.js" />
-        <option value="$PROJECT_DIR$/webroot/js/plugins/owl2-carousel-v1.js" />
-        <option value="$PROJECT_DIR$/src/Controller/AccountsController.ctp" />
-        <option value="$PROJECT_DIR$/webroot/css/accounts/line-icons.css" />
-        <option value="$PROJECT_DIR$/webroot/css/accounts/style.css" />
-        <option value="$PROJECT_DIR$/webroot/css/accounts/app.css" />
-        <option value="$PROJECT_DIR$/src/Template/Layout/accounts.ctp" />
-        <option value="$PROJECT_DIR$/src/Template/Element/Flash/accounts.ctp" />
-        <option value="$PROJECT_DIR$/config/routes.php" />
-        <option value="$PROJECT_DIR$/src/Template/Element/accounts.ctp" />
-        <option value="$PROJECT_DIR$/src/Template/Accounts/index.ctp" />
-        <option value="$PROJECT_DIR$/src/Template/Accounts/register.ctp" />
-        <option value="$PROJECT_DIR$/webroot/css/line-icons.css" />
-        <option value="$PROJECT_DIR$/src/Template/Home/events.ctp" />
-        <option value="$PROJECT_DIR$/webroot/vendor/bootstrap/css/bootstrap.min.css" />
-        <option value="$PROJECT_DIR$/webroot/css/accounts/page_log_reg_v4.css" />
-        <option value="$PROJECT_DIR$/src/Template/Layout/default.ctp" />
-        <option value="$PROJECT_DIR$/webroot/css/vitality-green.css" />
-        <option value="$PROJECT_DIR$/src/Template/Accounts/passwordReset.ctp" />
-        <option value="$PROJECT_DIR$/src/Template/Accounts/resetPassword.ctp" />
-        <option value="$PROJECT_DIR$/src/Controller/AccountsController.php" />
-        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Controller/AccountsCountroller.php" />
+        <option value="$PROJECT_DIR$/vendor/cakephp/cakephp/src/Routing/RouteCollection.php" />
+        <option value="$PROJECT_DIR$/src/Controller/ErrorController.php" />
+        <option value="$PROJECT_DIR$/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php" />
+        <option value="$PROJECT_DIR$/vendor/cakephp/cakephp/src/Event/EventManager.php" />
+        <option value="$PROJECT_DIR$/vendor/cakephp/cakephp/src/Http/ServerRequest.php" />
+        <option value="$PROJECT_DIR$/vendor/cakephp/cakephp/src/Controller/Controller.php" />
         <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php" />
+        <option value="$PROJECT_DIR$/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php" />
+        <option value="$PROJECT_DIR$/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php" />
+        <option value="$PROJECT_DIR$/config/routes.php" />
+        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/config/routes.php" />
+        <option value="$PROJECT_DIR$/src/Template/Accounts/message.ctp" />
+        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Controller/Component/SslCryptor.php" />
+        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/tests/TestCase/Controller/Component/SslCryptorComponentTest.php" />
+        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Controller/Component/SslCryptorComponent.php" />
+        <option value="$PROJECT_DIR$/config/bootstrap.php" />
+        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Model/Table/UsersTable.php" />
+        <option value="$PROJECT_DIR$/vendor/cakephp/cakephp/src/ORM/Table.php" />
         <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Controller/Component/EmailComponent.php" />
-        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/tests/TestCase/Controller/Component/MailTransportMock.php" />
-        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/tests/TestCase/Controller/Component/EmailComponentTest.php" />
-        <option value="$PROJECT_DIR$/phpunit.xml.dist" />
         <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Model/Entity/UserEntity.php" />
-        <option value="$PROJECT_DIR$/config/app.php" />
-        <option value="$PROJECT_DIR$/vendor/cakephp/cakephp/src/TestSuite/Fixture/FixtureManager.php" />
-        <option value="$PROJECT_DIR$/vendor/cakephp/cakephp/src/TestSuite/Fixture/TestFixture.php" />
-        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Model/Table/RolesTable.php" />
-        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Model/Table/RolesUsersTable.php" />
-        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/Fixture/RolesFixture.php" />
-        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/Fixture/RolesUsersFixture.php" />
         <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/Fixture/UsersFixture.php" />
+        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/TestCase/Controller/AccountsControllerTest.php" />
         <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Controller/WrsftBaseController.php" />
         <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Controller/Component/WrsftAuthComponent.php" />
-        <option value="$PROJECT_DIR$/vendor/cakephp/cakephp/src/Auth/FormAuthenticate.php" />
-        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/TestCase/Controller/Component/WrsftAuthComponentTest.php" />
-        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/TestCase/Model/Table/UsersTableTest.php" />
-        <option value="$PROJECT_DIR$/vendor/cakephp/cakephp/src/Auth/BaseAuthenticate.php" />
-        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Model/Table/UsersTable.php" />
+        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Controller/Component/PackagerComponent.php" />
+        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/Routing/Route/WyswygtRoute.php" />
+        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Controller/AccountsController.php" />
+        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Model/Entity/LocationEntity.php" />
+        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Model/Entity/ImageEntity.php" />
+        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Model/Entity/TableMapperEntity.php" />
+        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Model/Table/ImagesTable.php" />
+        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Model/Table/TableMappersTable.php" />
+        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/tests/Fixture/TableMapperFixture.php" />
+        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Model/Table/LocationsTable.php" />
+        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/tests/Fixture/LocationFixture.php" />
+        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Model/Entity/TagEntity.php" />
+        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Model/Table/TagsTable.php" />
+        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/tests/Fixture/ImagesFixture.php" />
+        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/tests/Fixture/TagsFixture.php" />
+        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Entity/EventEntity.php" />
+        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Entity/TimeLineEntity.php" />
+        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Entity/EventRegistration.php" />
+        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Entity/EventResellerEntity.php" />
+        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/EventsTable.php" />
+        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/EventRegistrationsTable.php" />
+        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Entity/EventRegistrationEntity.php" />
+        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/EventResellersTable.php" />
+        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/EventsResellersTable.php" />
+        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/TimeLinesTable.php" />
+        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/EventsTimeLinesTable.php" />
       </list>
     </option>
   </component>
@@ -234,9 +156,64 @@
       <server host="localhost" id="a9d90839-62dd-4650-acb8-340b893c6756" name="localhost" port="8080" />
     </servers>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP">
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true">
     <include_path>
       <path value="C:\xampp\htdocs\demos\vhealings\vendor\cakephp\cakephp" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/aura/intl" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-diactoros" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/seld/jsonlint" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/cakephp/debug_kit" />
+      <path value="$PROJECT_DIR$/vendor/cakephp/bake" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/cakephp/migrations" />
+      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-color" />
+      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-highlighter" />
+      <path value="$PROJECT_DIR$/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/vendor/justinrainbow/json-schema" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/seld/cli-prompt" />
+      <path value="$PROJECT_DIR$/vendor/seld/phar-utils" />
+      <path value="$PROJECT_DIR$/vendor/mobiledetect/mobiledetectlib" />
+      <path value="$PROJECT_DIR$/vendor/robmorgan/phinx" />
+      <path value="$PROJECT_DIR$/vendor/jdorn/sql-formatter" />
+      <path value="$PROJECT_DIR$/vendor/cakephp/plugin-installer" />
+      <path value="$PROJECT_DIR$/vendor/cakephp/chronos" />
+      <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
@@ -286,22 +263,353 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane />
-      </pane>
       <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vhealings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vhealings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vhealings" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vhealings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vhealings" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vhealings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vhealings" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mustaphakd" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cakephp-Utilities" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vhealings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vhealings" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mustaphakd" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cakephp-Utilities" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fixture" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vhealings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vhealings" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mustaphakd" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cakephp-Utilities" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Table" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vhealings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vhealings" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mustaphakd" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cakephp-Utilities" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entity" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vhealings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vhealings" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mustaphakd" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cakephp-Utilities" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vhealings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vhealings" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mustaphakd" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cakephp-Utilities" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vhealings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vhealings" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mustaphakd" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vhealings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vhealings" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mustaphakd" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cakephp-EventsManager" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vhealings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vhealings" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mustaphakd" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cakephp-EventsManager" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vhealings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vhealings" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mustaphakd" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cakephp-EventsManager" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vhealings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vhealings" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mustaphakd" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cakephp-EventsManager" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/vendor/cakephp/cakephp" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\demos\vhealings\plugins\Wrsft" />
+      <recent name="C:\xampp\htdocs\demos\vhealings\plugins\mustaphakd\cakephp-UsersManager" />
       <recent name="C:\xampp\htdocs\demos\vhealings\plugins\mustaphakd" />
       <recent name="C:\xampp\htdocs\demos\vhealings\src\Template\Accounts" />
       <recent name="C:\xampp\htdocs\demos\vhealings\webroot\css" />
@@ -364,6 +672,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="7769853a-614e-4dca-9e0f-87dec91f8b74" name="Default" comment="" />
@@ -372,36 +683,61 @@
       <option name="presentableId" value="Default" />
       <updated>1492448885318</updated>
       <workItem from="1492448892474" duration="27890000" />
-      <workItem from="1492617896146" duration="119366000" />
+      <workItem from="1492617896146" duration="159363000" />
+      <workItem from="1494441819818" duration="74642000" />
+      <workItem from="1494796682655" duration="44713000" />
+      <workItem from="1494968501974" duration="9935000" />
+      <workItem from="1495032046488" duration="56445000" />
+      <workItem from="1495453738069" duration="10937000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147256000" />
+    <option name="totallyTimeSpent" value="383925000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21848138" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24713467" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14541547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.88963664" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.254298" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39973083" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="92" y="92" width="1256" height="676" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39973083" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -417,433 +753,319 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint type="php">
-          <url>file://$PROJECT_DIR$/config/routes.php</url>
-          <line>80</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint type="php">
-          <url>file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/Routing/Router.php</url>
-          <line>367</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint type="php">
-          <url>file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php</url>
-          <line>93</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint type="php">
-          <url>file://$PROJECT_DIR$/config/routes.php</url>
-          <line>81</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/src/Template/Layout/default.ctp</url>
           <line>18</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Controller/AccountsCountroller.php</url>
-          <line>35</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/Controller/Component.php</url>
           <line>166</line>
           <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/tests/TestCase/Controller/Component/EmailComponentTest.php</url>
-          <line>49</line>
-          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="16" />
+      <option name="time" value="30" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/tests/Fixture/CategoriesFixture.php">
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Controller/Component/EmailComponent.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/tests/Fixture/UuidportfoliosFixture.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/tests/Fixture/AuthUsersFixture.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/Database/Schema/TableSchema.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2505">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/tests/Fixture/SessionsFixture.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/tests/Fixture/ArticlesTagsFixture.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/tests/Fixture/ThingsFixture.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/tests/Fixture/UuiditemsFixture.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/tests/Fixture/UsersFixture.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="44" column="126" selection-start-line="44" selection-start-column="126" selection-end-line="44" selection-end-column="145" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/tests/Fixture/ArticlesFixture.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-42">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Model/Entity/UserEntity.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/Database/Query.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="869" column="20" selection-start-line="869" selection-start-column="20" selection-end-line="869" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/Core/App.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="160" column="7" selection-start-line="160" selection-start-column="7" selection-end-line="160" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/Core/Plugin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="628">
-          <caret line="278" column="27" selection-start-line="278" selection-start-column="27" selection-end-line="278" selection-end-column="27" />
-          <folding>
-            <element signature="e#1043#1125#0#PHP" expanded="false" />
-            <element signature="e#1162#4159#0#PHP" expanded="false" />
-            <element signature="e#4164#6322#0#PHP" expanded="false" />
-            <element signature="e#6328#6414#0#PHP" expanded="false" />
-            <element signature="e#6419#7018#0#PHP" expanded="false" />
-            <element signature="e#7024#7791#0#PHP" expanded="false" />
-            <element signature="e#7796#8811#0#PHP" expanded="false" />
-            <element signature="e#9946#10275#0#PHP" expanded="false" />
-            <element signature="e#10280#10520#0#PHP" expanded="false" />
-            <element signature="e#10526#10797#0#PHP" expanded="false" />
-            <element signature="e#10802#11192#0#PHP" expanded="false" />
-            <element signature="e#11198#11482#0#PHP" expanded="false" />
-            <element signature="e#11487#11976#0#PHP" expanded="false" />
-            <element signature="e#11982#12323#0#PHP" expanded="false" />
-            <element signature="e#12328#12578#0#PHP" expanded="false" />
-            <element signature="e#12584#12758#0#PHP" expanded="false" />
-            <element signature="e#12763#12962#0#PHP" expanded="false" />
-            <element signature="e#12968#13207#0#PHP" expanded="false" />
-            <element signature="e#13212#13409#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Constraint/IsType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="61" column="20" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/TestCase/Controller/PagesControllerTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-663">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/TestCase/ApplicationTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="273" column="31" selection-start-line="273" selection-start-column="31" selection-end-line="273" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/TestCase.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="2106" column="25" selection-start-line="2106" selection-start-column="19" selection-end-line="2106" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/phpunit/phpunit/src/ForwardCompatibility/TestCase.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/ORM/Locator/TableLocator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="173" column="26" selection-start-line="173" selection-start-column="26" selection-end-line="173" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/ORM/TableRegistry.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="109" column="35" selection-start-line="109" selection-start-column="35" selection-end-line="109" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/TestSuite/Fixture/TestFixture.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="292" column="54" selection-start-line="292" selection-start-column="54" selection-end-line="292" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/ORM/Table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-289">
-          <caret line="1074" column="25" selection-start-line="1074" selection-start-column="9" selection-end-line="1074" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/TestSuite/Fixture/FixtureManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-459">
-          <caret line="64" column="14" selection-start-line="64" selection-start-column="14" selection-end-line="64" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/TestSuite/TestCase.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-434">
-          <caret line="39" column="11" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
-          <folding>
-            <element signature="e#3930#4282#0#PHP" expanded="false" />
-            <element signature="e#4287#4544#0#PHP" expanded="false" />
-            <element signature="e#4550#5013#0#PHP" expanded="false" />
-            <element signature="e#5018#5327#0#PHP" expanded="false" />
-            <element signature="e#5333#5659#0#PHP" expanded="false" />
-            <element signature="e#5664#5936#0#PHP" expanded="false" />
-            <element signature="e#5942#6268#0#PHP" expanded="false" />
-            <element signature="e#6273#6539#0#PHP" expanded="false" />
-            <element signature="e#6545#6909#0#PHP" expanded="false" />
-            <element signature="e#6914#7186#0#PHP" expanded="false" />
-            <element signature="e#7192#7556#0#PHP" expanded="false" />
-            <element signature="e#7561#7839#0#PHP" expanded="false" />
-            <element signature="e#7845#8199#0#PHP" expanded="false" />
-            <element signature="e#8204#8472#0#PHP" expanded="false" />
-            <element signature="e#8478#8840#0#PHP" expanded="false" />
-            <element signature="e#8845#9119#0#PHP" expanded="false" />
-            <element signature="e#9125#9579#0#PHP" expanded="false" />
-            <element signature="e#9584#9888#0#PHP" expanded="false" />
-            <element signature="e#9894#10351#0#PHP" expanded="false" />
-            <element signature="e#10356#10666#0#PHP" expanded="false" />
-            <element signature="e#10672#10971#0#PHP" expanded="false" />
-            <element signature="e#10976#11246#0#PHP" expanded="false" />
-            <element signature="e#11252#12600#0#PHP" expanded="false" />
-            <element signature="e#12605#17940#0#PHP" expanded="false" />
-            <element signature="e#17946#18304#0#PHP" expanded="false" />
-            <element signature="e#18309#19332#0#PHP" expanded="false" />
-            <element signature="e#19338#19524#0#PHP" expanded="false" />
-            <element signature="e#19529#19642#0#PHP" expanded="false" />
-            <element signature="e#19680#19991#0#PHP" expanded="false" />
-            <element signature="e#19996#20255#0#PHP" expanded="false" />
-            <element signature="e#20261#20576#0#PHP" expanded="false" />
-            <element signature="e#20581#20841#0#PHP" expanded="false" />
-            <element signature="e#20847#21072#0#PHP" expanded="false" />
-            <element signature="e#21077#21362#0#PHP" expanded="false" />
-            <element signature="e#21368#21557#0#PHP" expanded="false" />
-            <element signature="e#21562#21741#0#PHP" expanded="false" />
-            <element signature="e#21777#22177#0#PHP" expanded="false" />
-            <element signature="e#22182#23784#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Model/Table/RolesTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="25" column="62" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Model/Table/RolesUsersTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Assert.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="382" column="27" selection-start-line="382" selection-start-column="27" selection-end-line="382" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/Fixture/RolesFixture.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/Fixture/RolesUsersFixture.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="42" column="57" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
-          <folding>
-            <element signature="e#117#141#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/AppController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/PagesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
-          <folding>
-            <element signature="e#602#626#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="357">
+          <caret line="61" column="7" selection-start-line="61" selection-start-column="7" selection-end-line="61" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Controller/WrsftBaseController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+          <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Controller/Component/WrsftAuthComponent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1122">
+          <caret line="72" column="8" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4930">
+          <caret line="290" column="27" selection-start-line="290" selection-start-column="27" selection-end-line="290" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/Mailer/Email.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="1883" column="27" selection-start-line="1883" selection-start-column="27" selection-end-line="1883" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/Utility/Security.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4632">
+          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/bootstrap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="151" column="3" selection-start-line="151" selection-start-column="3" selection-end-line="151" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/Core/Configure.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3638">
+          <caret line="231" column="27" selection-start-line="231" selection-start-column="27" selection-end-line="231" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/_types.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="92" column="13" selection-start-line="92" selection-start-column="13" selection-end-line="92" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/Routing/Route/WyswygtRoute.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1734">
+          <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/Reflection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="880" column="20" selection-start-line="880" selection-start-column="20" selection-end-line="880" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/Http/ServerRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1972">
+          <caret line="1438" column="20" selection-start-line="1438" selection-start-column="20" selection-end-line="1438" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Controller/Component/PackagerComponent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="42" column="74" selection-start-line="42" selection-start-column="74" selection-end-line="42" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Controller/AccountsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="353" column="62" selection-start-line="353" selection-start-column="62" selection-end-line="353" selection-end-column="62" />
           <folding>
-            <element signature="e#7#90#0#PHP" expanded="true" />
+            <element signature="e#518#1313#0#PHP" expanded="false" />
+            <element signature="e#1514#1595#0#PHP" expanded="false" />
+            <element signature="e#1623#2110#0#PHP" expanded="false" />
+            <element signature="e#2116#7374#0#PHP" expanded="false" />
+            <element signature="e#3112#4471#0#PHP" expanded="false" />
+            <element signature="e#5481#5876#0#PHP" expanded="false" />
+            <element signature="e#5895#7179#0#PHP" expanded="false" />
+            <element signature="e#7380#7787#0#PHP" expanded="false" />
+            <element signature="e#7793#8817#0#PHP" expanded="false" />
+            <element signature="e#8823#10521#0#PHP" expanded="false" />
+            <element signature="e#10527#12176#0#PHP" expanded="false" />
+            <element signature="e#12182#13993#0#PHP" expanded="false" />
+            <element signature="e#12485#13335#0#PHP" expanded="false" />
+            <element signature="e#12624#13325#0#PHP" expanded="false" />
+            <element signature="e#13999#14446#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/Core/functions.php">
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/TestCase/Controller/AccountsControllerTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+        <state relative-caret-position="503">
+          <caret line="664" column="0" selection-start-line="664" selection-start-column="0" selection-end-line="664" selection-end-column="0" />
+          <folding>
+            <element signature="e#128#163#0#PHP" expanded="false" />
+            <element signature="e#1066#1894#0#PHP" expanded="false" />
+            <element signature="e#1900#2280#0#PHP" expanded="false" />
+            <element signature="e#2286#5726#0#PHP" expanded="false" />
+            <element signature="e#2621#3217#1#PHP" expanded="false" />
+            <element signature="e#3283#3431#1#PHP" expanded="false" />
+            <element signature="e#4118#4667#0#PHP" expanded="false" />
+            <element signature="e#4738#5210#0#PHP" expanded="false" />
+            <element signature="e#5732#8000#0#PHP" expanded="false" />
+            <element signature="e#6007#6583#1#PHP" expanded="false" />
+            <element signature="e#6649#6797#1#PHP" expanded="false" />
+            <element signature="e#6809#7222#0#PHP" expanded="false" />
+            <element signature="e#7265#7641#0#PHP" expanded="false" />
+            <element signature="e#8006#10161#0#PHP" expanded="false" />
+            <element signature="e#8286#8862#1#PHP" expanded="false" />
+            <element signature="e#8928#9076#1#PHP" expanded="false" />
+            <element signature="e#9088#9410#0#PHP" expanded="false" />
+            <element signature="e#9453#9829#0#PHP" expanded="false" />
+            <element signature="e#10167#12339#0#PHP" expanded="false" />
+            <element signature="e#10451#11027#1#PHP" expanded="false" />
+            <element signature="e#11093#11241#1#PHP" expanded="false" />
+            <element signature="e#11253#11575#0#PHP" expanded="false" />
+            <element signature="e#11618#11994#0#PHP" expanded="false" />
+            <element signature="e#12345#12761#0#PHP" expanded="false" />
+            <element signature="e#12767#13199#0#PHP" expanded="false" />
+            <element signature="e#13205#14912#0#PHP" expanded="false" />
+            <element signature="e#14918#16904#0#PHP" expanded="false" />
+            <element signature="e#16910#17550#0#PHP" expanded="false" />
+            <element signature="e#17556#18501#0#PHP" expanded="false" />
+            <element signature="e#18507#19117#0#PHP" expanded="false" />
+            <element signature="e#19123#19739#0#PHP" expanded="false" />
+            <element signature="e#19745#20870#0#PHP" expanded="false" />
+            <element signature="e#21060#21713#0#PHP" expanded="false" />
+            <element signature="e#21410#21558#1#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/Controller/ComponentRegistry.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/Controller/Controller.php">
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_1.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="320" column="31" selection-start-line="320" selection-start-column="31" selection-end-line="320" selection-end-column="31" />
+        <state relative-caret-position="697">
+          <caret line="738" column="9" selection-start-line="738" selection-start-column="9" selection-end-line="738" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/Core/InstanceConfigTrait.php">
+    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/Core/App.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="70" column="20" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="20" />
+        <state relative-caret-position="-2040">
+          <caret line="44" column="90" selection-start-line="44" selection-start-column="90" selection-end-line="44" selection-end-column="90" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/Network/Request.php">
+    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/ORM/BehaviorRegistry.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3060">
+          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/Cache/CacheRegistry.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="75" column="31" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/Datasource/ConnectionRegistry.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-722">
+          <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/Console/HelperRegistry.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-544">
+          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/View/HelperRegistry.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/Log/LogEngineRegistry.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="82" column="9" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/Core/ObjectRegistry.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="689">
+          <caret line="316" column="20" selection-start-line="316" selection-start-column="20" selection-end-line="316" selection-end-column="20" />
+          <folding>
+            <element signature="e#3266#3965#0#PHP" expanded="false" />
+            <element signature="e#3970#5075#0#PHP" expanded="false" />
+            <element signature="e#6105#6205#0#PHP" expanded="false" />
+            <element signature="e#6210#6289#0#PHP" expanded="false" />
+            <element signature="e#6295#6481#0#PHP" expanded="false" />
+            <element signature="e#6486#6569#0#PHP" expanded="false" />
+            <element signature="e#6575#6735#0#PHP" expanded="false" />
+            <element signature="e#6740#6896#0#PHP" expanded="false" />
+            <element signature="e#6902#7049#0#PHP" expanded="false" />
+            <element signature="e#7054#7128#0#PHP" expanded="false" />
+            <element signature="e#7134#7268#0#PHP" expanded="false" />
+            <element signature="e#7273#7360#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/Console/TaskRegistry.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Model/Table/UsersTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+          <folding>
+            <element signature="e#1009#1553#0#PHP" expanded="false" />
+            <element signature="e#1009#1707#0#PHP" expanded="false" />
+            <element signature="e#1009#2164#0#PHP" expanded="false" />
+            <element signature="e#1768#2150#0#PHP" expanded="false" />
+            <element signature="e#1009#2687#0#PHP" expanded="false" />
+            <element signature="e#1009#3206#0#PHP" expanded="false" />
+            <element signature="e#1009#4806#0#PHP" expanded="false" />
+            <element signature="e#1009#5279#0#PHP" expanded="false" />
+            <element signature="e#1009#5660#0#PHP" expanded="false" />
+            <element signature="e#5709#5990#0#PHP" expanded="false" />
+            <element signature="e#5996#6116#0#PHP" expanded="false" />
+            <element signature="e#6121#6229#0#PHP" expanded="false" />
+            <element signature="e#6446#6911#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Model/Entity/ImageEntity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/Fixture/RolesFixture.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -851,273 +1073,181 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/Controller/Component.php">
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/Fixture/RolesUsersFixture.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="127" column="19" selection-start-line="127" selection-start-column="19" selection-end-line="127" selection-end-column="19" />
-          <folding>
-            <element signature="e#619#653#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/Auth/FormAuthenticate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/Http/ServerRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="1510" column="20" selection-start-line="1510" selection-start-column="20" selection-end-line="1510" selection-end-column="20" />
-          <folding>
-            <element signature="e#3611#3897#0#PHP" expanded="false" />
-            <element signature="e#3933#4902#0#PHP" expanded="false" />
-            <element signature="e#4909#5002#0#PHP" expanded="false" />
-            <element signature="e#5044#5200#0#PHP" expanded="false" />
-            <element signature="e#5229#5310#0#PHP" expanded="false" />
-            <element signature="e#5336#5449#0#PHP" expanded="false" />
-            <element signature="e#5479#5579#0#PHP" expanded="false" />
-            <element signature="e#5617#5725#0#PHP" expanded="false" />
-            <element signature="e#5809#5909#0#PHP" expanded="false" />
-            <element signature="e#5950#6031#0#PHP" expanded="false" />
-            <element signature="e#6062#6144#0#PHP" expanded="false" />
-            <element signature="e#6180#6485#0#PHP" expanded="false" />
-            <element signature="e#6602#7797#0#PHP" expanded="false" />
-            <element signature="e#7802#8327#0#PHP" expanded="false" />
-            <element signature="e#10481#10801#0#PHP" expanded="false" />
-            <element signature="e#11778#12104#0#PHP" expanded="false" />
-            <element signature="e#12109#12492#0#PHP" expanded="false" />
-            <element signature="e#12498#12740#0#PHP" expanded="false" />
-            <element signature="e#14149#14425#0#PHP" expanded="false" />
-            <element signature="e#14430#14794#0#PHP" expanded="false" />
-            <element signature="e#14800#15116#0#PHP" expanded="false" />
-            <element signature="e#15121#15685#0#PHP" expanded="false" />
-            <element signature="e#15691#15781#0#PHP" expanded="false" />
-            <element signature="e#15786#15977#0#PHP" expanded="false" />
-            <element signature="e#15983#16304#0#PHP" expanded="false" />
-            <element signature="e#16309#16490#0#PHP" expanded="false" />
-            <element signature="e#16496#16614#0#PHP" expanded="false" />
-            <element signature="e#16619#17047#0#PHP" expanded="false" />
-            <element signature="e#17053#17300#0#PHP" expanded="false" />
-            <element signature="e#17305#17949#0#PHP" expanded="false" />
-            <element signature="e#17955#18262#0#PHP" expanded="false" />
-            <element signature="e#18267#18591#0#PHP" expanded="false" />
-            <element signature="e#18597#19035#0#PHP" expanded="false" />
-            <element signature="e#19040#19196#0#PHP" expanded="false" />
-            <element signature="e#19202#19511#0#PHP" expanded="false" />
-            <element signature="e#19516#19602#0#PHP" expanded="false" />
-            <element signature="e#19608#20163#0#PHP" expanded="false" />
-            <element signature="e#20168#20740#0#PHP" expanded="false" />
-            <element signature="e#20746#20853#0#PHP" expanded="false" />
-            <element signature="e#20858#20942#0#PHP" expanded="false" />
-            <element signature="e#20948#21303#0#PHP" expanded="false" />
-            <element signature="e#21308#21997#0#PHP" expanded="false" />
-            <element signature="e#22003#22205#0#PHP" expanded="false" />
-            <element signature="e#22210#22515#0#PHP" expanded="false" />
-            <element signature="e#22521#22716#0#PHP" expanded="false" />
-            <element signature="e#22721#23180#0#PHP" expanded="false" />
-            <element signature="e#23186#23392#0#PHP" expanded="false" />
-            <element signature="e#23397#23841#0#PHP" expanded="false" />
-            <element signature="e#23847#24056#0#PHP" expanded="false" />
-            <element signature="e#24061#24680#0#PHP" expanded="false" />
-            <element signature="e#24686#25039#0#PHP" expanded="false" />
-            <element signature="e#25044#25207#0#PHP" expanded="false" />
-            <element signature="e#25213#27338#0#PHP" expanded="false" />
-            <element signature="e#27343#27768#0#PHP" expanded="false" />
-            <element signature="e#27774#28100#0#PHP" expanded="false" />
-            <element signature="e#28105#28241#0#PHP" expanded="false" />
-            <element signature="e#28247#28536#0#PHP" expanded="false" />
-            <element signature="e#28541#28795#0#PHP" expanded="false" />
-            <element signature="e#28801#29179#0#PHP" expanded="false" />
-            <element signature="e#29184#29516#0#PHP" expanded="false" />
-            <element signature="e#29522#29690#0#PHP" expanded="false" />
-            <element signature="e#29695#29948#0#PHP" expanded="false" />
-            <element signature="e#29954#30464#0#PHP" expanded="false" />
-            <element signature="e#30469#30596#0#PHP" expanded="false" />
-            <element signature="e#30602#31071#0#PHP" expanded="false" />
-            <element signature="e#31076#31669#0#PHP" expanded="false" />
-            <element signature="e#31675#31978#0#PHP" expanded="false" />
-            <element signature="e#31983#32129#0#PHP" expanded="false" />
-            <element signature="e#32135#32639#0#PHP" expanded="false" />
-            <element signature="e#32644#32872#0#PHP" expanded="false" />
-            <element signature="e#32878#33209#0#PHP" expanded="false" />
-            <element signature="e#33214#33343#0#PHP" expanded="false" />
-            <element signature="e#33349#33646#0#PHP" expanded="false" />
-            <element signature="e#33651#33849#0#PHP" expanded="false" />
-            <element signature="e#33855#34276#0#PHP" expanded="false" />
-            <element signature="e#34281#34686#0#PHP" expanded="false" />
-            <element signature="e#34692#34949#0#PHP" expanded="false" />
-            <element signature="e#39699#39953#0#PHP" expanded="false" />
-            <element signature="e#39958#40127#0#PHP" expanded="false" />
-            <element signature="e#40133#40853#0#PHP" expanded="false" />
-            <element signature="e#40858#41173#0#PHP" expanded="false" />
-            <element signature="e#41179#41524#0#PHP" expanded="false" />
-            <element signature="e#41529#41651#0#PHP" expanded="false" />
-            <element signature="e#41657#42180#0#PHP" expanded="false" />
-            <element signature="e#42185#42812#0#PHP" expanded="false" />
-            <element signature="e#42818#43091#0#PHP" expanded="false" />
-            <element signature="e#43096#44030#0#PHP" expanded="false" />
-            <element signature="e#44036#44436#0#PHP" expanded="false" />
-            <element signature="e#44441#44601#0#PHP" expanded="false" />
-            <element signature="e#44607#45238#0#PHP" expanded="false" />
-            <element signature="e#45243#45441#0#PHP" expanded="false" />
-            <element signature="e#45447#46366#0#PHP" expanded="false" />
-            <element signature="e#46371#46687#0#PHP" expanded="false" />
-            <element signature="e#46693#47399#0#PHP" expanded="false" />
-            <element signature="e#47691#48077#0#PHP" expanded="false" />
-            <element signature="e#48082#48317#0#PHP" expanded="false" />
-            <element signature="e#48323#49241#0#PHP" expanded="false" />
-            <element signature="e#49246#49548#0#PHP" expanded="false" />
-            <element signature="e#49554#49818#0#PHP" expanded="false" />
-            <element signature="e#49823#49979#0#PHP" expanded="false" />
-            <element signature="e#49985#50294#0#PHP" expanded="false" />
-            <element signature="e#50299#50417#0#PHP" expanded="false" />
-            <element signature="e#50423#50536#0#PHP" expanded="false" />
-            <element signature="e#50541#50617#0#PHP" expanded="false" />
-            <element signature="e#50623#50779#0#PHP" expanded="false" />
-            <element signature="e#50784#50928#0#PHP" expanded="false" />
-            <element signature="e#50934#51379#0#PHP" expanded="false" />
-            <element signature="e#51384#51455#0#PHP" expanded="false" />
-            <element signature="e#51461#51678#0#PHP" expanded="false" />
-            <element signature="e#51683#51810#0#PHP" expanded="false" />
-            <element signature="e#51816#51935#0#PHP" expanded="false" />
-            <element signature="e#51940#52387#0#PHP" expanded="false" />
-            <element signature="e#52393#52657#0#PHP" expanded="false" />
-            <element signature="e#52662#52972#0#PHP" expanded="false" />
-            <element signature="e#52978#53581#0#PHP" expanded="false" />
-            <element signature="e#56442#56609#0#PHP" expanded="false" />
-            <element signature="e#56615#57002#0#PHP" expanded="false" />
-            <element signature="e#57007#57179#0#PHP" expanded="false" />
-            <element signature="e#57185#57407#0#PHP" expanded="false" />
-            <element signature="e#57412#57531#0#PHP" expanded="false" />
-            <element signature="e#57537#57743#0#PHP" expanded="false" />
-            <element signature="e#57748#58027#0#PHP" expanded="false" />
-            <element signature="e#58033#58227#0#PHP" expanded="false" />
-            <element signature="e#58232#58590#0#PHP" expanded="false" />
-            <element signature="e#58596#58831#0#PHP" expanded="false" />
-            <element signature="e#58836#59148#0#PHP" expanded="false" />
-            <element signature="e#59154#59342#0#PHP" expanded="false" />
-            <element signature="e#59347#59584#0#PHP" expanded="false" />
-            <element signature="e#59590#59789#0#PHP" expanded="false" />
-            <element signature="e#59794#60004#0#PHP" expanded="false" />
-            <element signature="e#60010#60106#0#PHP" expanded="false" />
-            <element signature="e#60111#60194#0#PHP" expanded="false" />
-            <element signature="e#60200#60458#0#PHP" expanded="false" />
-            <element signature="e#60463#60660#0#PHP" expanded="false" />
-            <element signature="e#60666#60948#0#PHP" expanded="false" />
-            <element signature="e#60953#61397#0#PHP" expanded="false" />
-            <element signature="e#61403#61537#0#PHP" expanded="false" />
-            <element signature="e#61542#61609#0#PHP" expanded="false" />
-            <element signature="e#61615#61789#0#PHP" expanded="false" />
-            <element signature="e#61794#61933#0#PHP" expanded="false" />
-            <element signature="e#61939#62116#0#PHP" expanded="false" />
-            <element signature="e#62121#62184#0#PHP" expanded="false" />
-            <element signature="e#62190#62536#0#PHP" expanded="false" />
-            <element signature="e#62541#63012#0#PHP" expanded="false" />
-            <element signature="e#63018#63534#0#PHP" expanded="false" />
-            <element signature="e#63539#63682#0#PHP" expanded="false" />
-            <element signature="e#63688#64045#0#PHP" expanded="false" />
-            <element signature="e#64050#64428#0#PHP" expanded="false" />
-            <element signature="e#64434#64697#0#PHP" expanded="false" />
-            <element signature="e#64702#65010#0#PHP" expanded="false" />
-            <element signature="e#65016#65329#0#PHP" expanded="false" />
-            <element signature="e#65334#65425#0#PHP" expanded="false" />
-            <element signature="e#65431#65680#0#PHP" expanded="false" />
-            <element signature="e#65685#65863#0#PHP" expanded="false" />
-            <element signature="e#65869#66117#0#PHP" expanded="false" />
-            <element signature="e#66122#66205#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/TestCase/Controller/Component/WrsftAuthComponentTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding>
-            <element signature="e#141#180#0#PHP" expanded="true" />
-            <element signature="e#1033#1234#0#PHP" expanded="false" />
-            <element signature="e#1240#1473#0#PHP" expanded="false" />
-            <element signature="e#1479#1745#0#PHP" expanded="false" />
-            <element signature="e#1853#1957#0#PHP" expanded="false" />
-            <element signature="e#1963#2404#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="836" column="6" selection-start-line="836" selection-start-column="6" selection-end-line="836" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Controller/Component/WrsftAuthComponent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
-          <folding>
-            <element signature="e#7#90#0#PHP" expanded="true" />
-            <element signature="e#132#176#0#PHP" expanded="true" />
-            <element signature="e#840#1071#0#PHP" expanded="false" />
-            <element signature="e#1077#1585#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/Auth/BaseAuthenticate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="144" column="25" selection-start-line="144" selection-start-column="25" selection-end-line="144" selection-end-column="25" />
+        <state relative-caret-position="595">
+          <caret line="50" column="5" selection-start-line="38" selection-start-column="4" selection-end-line="50" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/Fixture/UsersFixture.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="61" column="95" selection-start-line="61" selection-start-column="95" selection-end-line="61" selection-end-column="111" />
-          <folding>
-            <element signature="e#117#153#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/ORM/Query.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-493">
-          <caret line="277" column="17" selection-start-line="277" selection-start-column="17" selection-end-line="277" selection-end-column="17" />
+        <state relative-caret-position="918">
+          <caret line="64" column="96" selection-start-line="64" selection-start-column="96" selection-end-line="64" selection-end-column="114" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Model/Table/UsersTable.php">
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Model/Table/ImagesTable.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+        <state relative-caret-position="136">
+          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Model/Entity/LocationEntity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Model/Entity/TableMapperEntity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Model/Table/LocationsTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
           <folding>
-            <element signature="e#119#156#0#PHP" expanded="true" />
-            <element signature="e#1009#1129#0#PHP" expanded="false" />
-            <element signature="e#1134#1242#0#PHP" expanded="false" />
+            <element signature="e#117#136#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/TestCase/Model/Table/UsersTableTest.php">
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Model/Table/TableMappersTable.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="109" column="28" selection-start-line="109" selection-start-column="28" selection-end-line="109" selection-end-column="28" />
-          <folding>
-            <element signature="e#129#167#0#PHP" expanded="true" />
-            <element signature="e#550#1566#0#PHP" expanded="false" />
-            <element signature="e#1572#1772#0#PHP" expanded="false" />
-            <marker date="1494026972959" expanded="false" signature="1809:2483" ph="..." />
-          </folding>
+        <state relative-caret-position="170">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Model/Table/TagsTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/src/Model/Entity/TagEntity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/tests/Fixture/ImagesFixture.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="19" column="94" selection-start-line="19" selection-start-column="94" selection-end-line="19" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/tests/Fixture/TableMapperFixture.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/tests/Fixture/TagsFixture.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-Utilities/tests/Fixture/LocationFixture.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Entity/EventResellerEntity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Entity/TimeLineEntity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Entity/EventEntity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Entity/EventRegistrationEntity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/EventsResellersTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/TimeLinesTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/EventsTimeLinesTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/EventRegistrationsTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/EventsTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>

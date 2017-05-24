@@ -27,7 +27,9 @@
             "App\\": "src",
             "Wrsft\\": [
                 "./plugins/mustaphakd/cakephp-Utilities/src",
-                "./plugins/mustaphakd/cakephp-UsersManager/src"]
+                "./plugins/mustaphakd/cakephp-UsersManager/src"],
+            "Wrsft\\Routing\\": [
+                "./plugins/mustaphakd/cakephp-Utilities/Routing"]
         }
     },
     "autoload-dev": {

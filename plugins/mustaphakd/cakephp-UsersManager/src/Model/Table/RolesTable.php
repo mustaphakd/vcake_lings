@@ -9,12 +9,13 @@
 
 namespace Wrsft\Model\Table ;
 
-use Cake\Auth\DefaultPasswordHasher ;
-use Cake\Event\Event ;
 use Cake\ORM\Table ;
+use Cake\Validation\Validator;
 
 class RolesTable extends Table
 {
+
+    private static $domain = "Wrsft\User";
 
     public function initialize(array $config)
     {
@@ -25,7 +26,42 @@ class RolesTable extends Table
             [
                 "className" => "Wrsft\Model\Table\UsersTable",
                 "through" => "Wrsft\Model\Table\RolesUsersTable",
-                "targetForeignKey" => "id"
+                "targetForeignKey" => "user_id",
+                "foreignKey" => "role_id"
             ]);
+    }
+
+    public function validationDefault(Validator $validator)
+    {
+        $validator
+            ->add(
+                "id",
+                [
+                   "isNumeric" => [
+                       "rule" => "numeric",
+                       "message" => __d(self::$domain, "id must be a valid numeric value"),
+                       "on" => "update"
+                   ],
+                    "required" => [
+                        "rule" => "notBlank",
+                        "message" => __d(self::$domain, "id is required"),
+                        "on" => "update"
+                    ]
+                ]
+            )
+            ->add(
+                "name",
+                [
+                    "notEmpty" => [
+                        "rule" => "notBlank",
+                        "message" => __d(self::$domain, "Name is empty")
+                    ],
+                    "properLength" => [
+                        "rule" => ["lengthBetween", 1, 25],
+                        "message" => __d(self::$domain, "Name length needs to be between 1 and 25 characters")
+                    ]
+
+                ]
+            );
     }
 }

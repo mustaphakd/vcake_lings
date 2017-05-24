@@ -9,8 +9,8 @@
 
 namespace Wrsft\Controller\Component ;
 
+use Cake\Collection\Collection;
 use Cake\Controller\Component\AuthComponent;
-use Cake\Event\Event ;
 
 class WrsftAuthComponent extends AuthComponent
 {
@@ -26,10 +26,11 @@ class WrsftAuthComponent extends AuthComponent
                         'username' => 'email',
                         'password' => 'password'
                     ],
-                    'userModel' => 'Users',
+                    'userModel' => 'Wrsft.Users',
                     'finder' => 'auth'
                 ]
-            ]
+            ],
+            'authorize' => 'Controller'
         ]);
     }
 
@@ -44,7 +45,7 @@ class WrsftAuthComponent extends AuthComponent
             return false;
         }
 
-        $roles = $user['roles'];
+        $roles = (array)$user['roles'];
         return in_array($roleName, $roles);
 
     }
@@ -69,17 +70,31 @@ class WrsftAuthComponent extends AuthComponent
             echo 'calling hasRole once';
             return $this->hasRole($roles, $user);
         }
+
         return false;
     }
 
     public function loginUser(){
+
         $user = $this->identify();
 
         if($user){
+            $roles = $user["roles"];
+            unset($user["roles"]);
+            $user["roles"] = (new Collection($roles))->extract("name")->toArray();
             $this->setUser($user);
             return true;
         }
         return false;
+    }
+
+    public function isUserAlreadyAuthenticated(){
+        return $this->user() !== null;
+    }
+
+    public function initAllowActions($actions = []){
+
+        array_push($this->allowedActions, $actions);
     }
 
 }

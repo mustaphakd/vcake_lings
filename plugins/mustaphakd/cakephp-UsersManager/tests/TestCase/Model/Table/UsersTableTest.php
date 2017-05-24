@@ -71,6 +71,7 @@ class UsersTableTest extends TestCase
 
         $query = $this->users->getUsers([$uids[0], $uids[1], $uids[2]]);
         $result = $query->toArray();
+
         $user = $this->users->get($result[0]->id);
         $names = $query->map(function($row){
             return $row['first_name'];
@@ -107,9 +108,43 @@ class UsersTableTest extends TestCase
 
         $identifiedUser = $authComponent->identify();
 
-        pr($identifiedUser);
+        $this->assertTrue(
+            is_array($identifiedUser),
+            "UserTableTest::testFindAuthsucceed Expected type not returned");
 
-        $this->assertTrue($identifiedUser !== false, "user could not be identified");
+        $this->assertFalse($identifiedUser === false , "user could not be identified");
+    }
+
+    public function testFindAuthFails(){
+
+        $request = new ServerRequest([
+            'post' => [
+
+                "email" => "audrey@wrsft.com",
+                "password" => "bonjour"
+
+            ],
+            'environment' => ['REQUEST_METHOD' => "POST"]
+        ]);
+
+        $controller = $this->getMockBuilder("\Cake\Controller\Controller")
+            ->setConstructorArgs([$request, new Response()])
+            ->setMethods(null)
+            ->getMock();
+
+        $componentRegistry = new ComponentRegistry($controller);
+
+        $authComponent = $componentRegistry->load("Auth", [
+            "className" => "Wrsft\Controller\Component\WrsftAuthComponent"
+        ]);
+
+        $identifiedUser = $authComponent->identify();
+
+        $this->assertFalse(
+            is_array($identifiedUser),
+            "UserTableTest::testFindAuthsucceed Expected type not returned");
+
+        $this->assertTrue($identifiedUser === false , "user was identified");
     }
 
 }

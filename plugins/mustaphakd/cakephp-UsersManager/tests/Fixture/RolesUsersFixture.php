@@ -43,7 +43,7 @@ class RolesUsersFixture extends TestFixture
         if(Configure::check('Fixture.Wrsft.UsersRoles')){
             $arr = Configure::read('Fixture.Wrsft.UsersRoles');
             $this->records = [];
-            $counter = 1;
+            $counter = 5;
             foreach ($arr as $ele){
                 $this->records[] = ['id' => $counter++, 'user_id' => $ele['user_id'], 'role_id' => $ele['role_id']];
             }

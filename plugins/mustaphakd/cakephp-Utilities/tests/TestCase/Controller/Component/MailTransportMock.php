@@ -23,6 +23,8 @@ class MailTransportMock extends AbstractTransport
 
     public $sentMessage;
 
+    public static $glSentMessages = [];
+
     public function send(Email $email)
     {
         $headers = $email->getHeaders(['from', 'sender', 'replyTo', 'readReceipt', 'returnPath', 'to', 'cc', 'subject']);
@@ -30,5 +32,20 @@ class MailTransportMock extends AbstractTransport
         $message = implode("\r\n", (array)$email->message());
 
         $this->sentMessage[] = ['headers' => $headers, 'message' => $message];
+        static::setMessageLog( ['headers' => $headers, 'message' => $message]);
     }
+
+    public static function getMessageLog(){
+        return MailTransportMock::$glSentMessages;
+    }
+
+    public static function setMessageLog($value){
+        MailTransportMock::$glSentMessages[] = $value;
+    }
+
+    public static function clearMessageLog()
+    {
+        MailTransportMock::$glSentMessages = [];
+    }
+
 }

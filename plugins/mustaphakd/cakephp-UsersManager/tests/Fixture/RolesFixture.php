@@ -32,6 +32,7 @@ class RolesFixture extends TestFixture
         ['id' => 2, 'name' => 'citoyen'],
         ['id' => 3, 'name' => 'bandit'],
         ['id' => 4, 'name' => 'observer'],
-        ['id' => 5, 'name' => 'boulanger']
+        ['id' => 5, 'name' => 'boulanger'],
+        ['id' => 6, 'name' => 'admin'],
     ];
 }
