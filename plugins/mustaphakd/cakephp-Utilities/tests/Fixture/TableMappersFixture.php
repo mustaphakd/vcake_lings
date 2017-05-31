@@ -10,21 +10,11 @@ namespace Wrsft\Test\Fixture;
 
 
 use Cake\TestSuite\Fixture\TestFixture;
+use Wrsft\Model\Table\TableMappersTable;
 
-class TableMapperFixture extends TestFixture
+class TableMappersFixture extends TestFixture
 {
-    public $field = [
-        "src_id" => [ "type" => "uuid", "null" => false],
-        "dest_id" => ["type" => "uuid", "null" => false],
-        "dest_type" => ["type" => "string", "null" => false, "fixed" => false, "length" => 50],
-        "created" => ["type" => "datetime"],
-        "_constraints" =>[
-            "prim" => [
-                "type" => "primary",
-                "columns" => ["src_id", "dest_id", "dest_type"]
-            ]
-        ]
-    ];
+    public $field = TableMappersTable::SCHEMA;
 
 
     public function init()

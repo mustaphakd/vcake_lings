@@ -20,7 +20,7 @@ use Wrsft\Model\Entity\UserEntity;
 
 class UsersTable extends Table
 {
-    private static $domain = "Wrsft\User";
+    private static $domain = 'Wrsft\User';
     public function initialize(array $config)
     {
         $this->setDisplayField('email');

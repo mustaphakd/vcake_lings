@@ -209,7 +209,7 @@ Type::build('timestamp')
  *
  */
 
-Plugin::load('mustaphakd/cakephp-Utilities');
+Plugin::load('mustaphakd/cakephp-Utilities', ["bootstrap" => true]);
 Plugin::load('mustaphakd/cakephp-UsersManager', ['routes' => true]);
 /*
  * Only try to load DebugKit in development mode

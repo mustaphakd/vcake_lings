@@ -8,24 +8,25 @@
 
 namespace Wrsft\Test\Fixture;
 
-
 use Cake\TestSuite\Fixture\TestFixture;
+use Cake\Utility\Text;
+use Wrsft\Model\Table\ImagesTable;
 
 class ImagesFixture extends TestFixture
 {
-    public $fields = [
-        "id" => ["type" => "uuid"],
-        "name" => ["type" => "string", "fixed" => false, "null" => false, "length" => 20],
-        "path" => ["type" => "string", "fixed" => false, "null" => false, "length" => 1000],
-        "extension" => ["type" => "string", "fixed" => false, "null" => false, "length" => 5],
-        "created" => ["type" => "datetime"],
-        "modified" => ["type" => "datetime"],
-        "_constraints" => [
-            "prim" => [
-                "type" => "primary",
-                "columns" => ["id"]
-            ]
-        ]
-    ];
+    public $fields = ImagesTable::SCHEMA;
+
+
+
+    public function init()
+    {
+        parent::init();
+
+        $this->records = [
+            ["id" => Text::uuid(), "name" => "img1", "path" => "tests/slider", "extension" => "jpg"],
+            ["id" => Text::uuid(), "name" => "img2", "path" => "tests/slider", "extension" => "jpg"],
+            ["id" => Text::uuid(), "name" => "img3", "path" => "tests/slider", "extension" => "png"]
+        ];
+    }
 
 }

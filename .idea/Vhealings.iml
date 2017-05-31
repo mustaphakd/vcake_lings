@@ -32,6 +32,8 @@
       <sourceFolder url="file://$MODULE_DIR$/vendor/composer/composer/tests/Composer/Test/Plugin/Fixtures/plugin-v7" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/vendor/composer/composer/tests/Composer/Test/Plugin/Fixtures/plugin-v8" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/vendor/composer/composer/tests/Composer/Test/Plugin/Fixtures/plugin-v9" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/plugins/mustaphakd/cakephp-Utilities/src" isTestSource="false" packagePrefix="Wrsft" />
+      <sourceFolder url="file://$MODULE_DIR$/plugins/mustaphakd/cakephp-EventsManager/src" isTestSource="false" packagePrefix="Wrsft" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/aura/intl" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/cakephp/bake" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/cakephp/chronos" />
