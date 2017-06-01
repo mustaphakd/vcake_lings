@@ -2,3 +2,6 @@
 /config/app.php
 /tmp/*
 /logs/*
+webroot/img/tests/slider/img1.jpg
+webroot/img/tests/slider/img2.jpg
+webroot/img/tests/slider/img3.jpg

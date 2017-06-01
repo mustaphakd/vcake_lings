@@ -14,7 +14,7 @@ use Cake\Utility\Text;
 use Wrsft\Model\Table\EventsTable;
 use Cake\Core\Configure;
 
-class EventFixture extends TestFixture
+class EventsFixture extends TestFixture
 {
     public $fields = EventsTable::SCHEMA;
 

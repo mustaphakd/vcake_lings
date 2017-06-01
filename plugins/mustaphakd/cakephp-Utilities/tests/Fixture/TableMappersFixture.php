@@ -9,12 +9,14 @@
 namespace Wrsft\Test\Fixture;
 
 
+use Cake\Core\Configure;
 use Cake\TestSuite\Fixture\TestFixture;
+use Cake\Utility\Text;
 use Wrsft\Model\Table\TableMappersTable;
 
 class TableMappersFixture extends TestFixture
 {
-    public $field = TableMappersTable::SCHEMA;
+    public $fields = TableMappersTable::SCHEMA;
 
 
     public function init()
@@ -31,6 +33,48 @@ class TableMappersFixture extends TestFixture
                     'dest_type' => $ele['dest_id'],
                     'created' => (new \DateTime("now"))->format("Y-m-d H:i:s")];
             }
+        }
+        else{
+            $commonSrc = Text::uuid();
+            Configure::write("Fixture.Wrsft.TableMappers.CommonSoure", $commonSrc);
+            $this->records = [
+              [
+                  "id" => Text::uuid(),
+                  "src_id" => Text::uuid(),
+                  "dest_id" => Text::uuid(),
+                  "dest_type" => "unclassified",
+                  "created" => (new \DateTime())->format("Y-m-d H:i:s")],
+                [
+                    "id" => Text::uuid(),
+                    "src_id" => $commonSrc,
+                    "dest_id" => Text::uuid(),
+                    "dest_type" => "peg",
+                    "created" => (new \DateTime())->format("Y-m-d H:i:s")],
+                [
+                    "id" => Text::uuid(),
+                    "src_id" => $commonSrc,
+                    "dest_id" => Text::uuid(),
+                    "dest_type" => "peg",
+                    "created" => (new \DateTime())->format("Y-m-d H:i:s")],
+                [
+                    "id" => Text::uuid(),
+                    "src_id" => $commonSrc,
+                    "dest_id" => Text::uuid(),
+                    "dest_type" => "image",
+                    "created" => (new \DateTime())->format("Y-m-d H:i:s")],
+                [
+                    "id" => Text::uuid(),
+                    "src_id" => $commonSrc,
+                    "dest_id" => Text::uuid(),
+                    "dest_type" => "image",
+                    "created" => (new \DateTime())->format("Y-m-d H:i:s")],
+                [
+                    "id" => Text::uuid(),
+                    "src_id" => $commonSrc,
+                    "dest_id" => Text::uuid(),
+                    "dest_type" => "unclassified",
+                    "created" => (new \DateTime())->format("Y-m-d H:i:s")]
+            ];
         }
     }
 }

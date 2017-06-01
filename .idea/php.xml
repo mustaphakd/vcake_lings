@@ -5,9 +5,14 @@
       <BehatSettings behat_path="$PROJECT_DIR$" />
     </behat_settings>
   </component>
+  <component name="PhpInterpreters">
+    <interpreters>
+      <interpreter home="php.exe" id="42aa3067-adba-4638-87c8-3d69eb512ff5" name="Interpreter for Composer" debugger_id="php.debugger.XDebug" />
+    </interpreters>
+  </component>
   <component name="PhpUnit">
     <phpunit_settings>
-      <PhpUnitSettings load_method="CUSTOM_LOADER" />
+      <PhpUnitSettings load_method="CUSTOM_LOADER" custom_loader_path="$PROJECT_DIR$/vendor/autoload.php" />
     </phpunit_settings>
   </component>
 </project>
