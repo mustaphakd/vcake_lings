@@ -21,6 +21,8 @@ class EventServicesComponent extends Component
 
     const domain = 'Wrsft\event_service';
     const EVENT_CREATED = "Event.created";
+    const EVENT_UPDATED = "Event.updated";
+    const ROLE_RESELLER = "reseller";
 
     /**
      * @var \Wrsft\Model\Table\EventsTable $Events;
@@ -92,6 +94,7 @@ class EventServicesComponent extends Component
     }
 
     public function insert_events(array $events, array $timelines, array $images, array $tags){
+
         if(empty($events))
         {
             return $this->insertionResult([
@@ -101,7 +104,6 @@ class EventServicesComponent extends Component
         }
 
         $events = $this->Events->newEntities($events);
-
         $errorMessages = $this->getEntitiesErrorMessage($events);
 
         if( $errorMessages != false){
@@ -155,12 +157,66 @@ class EventServicesComponent extends Component
         }
 
         $response = $this->insertionResult(
-            $events,
+            [
+                "entities" => $events,
+                "message" => __d(self::domain, "{0}{1} were created", count($events), "events")
+            ],
             $timelinesMessages,
             $imagesMessages,
             $tagsMessages);
 
         $this->notifyResellers($newEvents, true);
+
+        return $response;
+    }
+
+    public function update_event(array $event, array $timelines, array $images, array $tags){
+
+        if(empty($event))
+        {
+            return $this->insertionResult([
+                "entities" => false,
+                "message" => __d(self::domain, "events were not updated")
+            ]);
+        }
+
+        $event = $this->Events->patchEntity($event);
+        $errorMessages = $event->getErrors();
+
+        if( $errorMessages != false){
+            return $this->insertionResult(
+                [
+                    "message" => $errorMessages
+                ]
+            );
+        }
+
+        $newEvent = $this->Events->save($event);
+
+        if($newEvent === false){
+            return $this->insertionResult();
+        }
+
+        EventManager::instance()->dispatch(
+            new Event(
+                self::EVENT_UPDATED,
+                $this,
+                [$newEvent]));
+
+        $timelinesMessages = $this->insert_timelines($timelines, $event);
+        $imagesMessages = $this->insert_images($images, $event);
+        $tagsMessages = $this->insert_tags($tags, $event);
+
+        $response = $this->insertionResult(
+            [
+                "entities" => $event,
+                "message" => __d(self::domain, "{0}{1} were created", 1, "events")
+            ],
+            $timelinesMessages,
+            $imagesMessages,
+            $tagsMessages);
+
+        $this->notifyResellers($newEvent, false);
 
         return $response;
     }
