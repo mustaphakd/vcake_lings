@@ -10,6 +10,8 @@ namespace Wrsft\Model\Table;
 
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
+use Wrsft\Model\Entity\EventEntity;
+use Wrsft\Model\Entity\UserEntity;
 
 class EventRegistrationsTable extends Table
 {
@@ -45,10 +47,37 @@ class EventRegistrationsTable extends Table
         parent::initialize($config);
 
         $this->setSchema(self::SCHEMA);
+
+        $this->belongsTo(
+            "Events",
+            [
+                "className" => '\Wrsft\Model\Table\EventsTable',
+                "foreignKey" => "event_id"
+            ]
+        );
+
+        $this->belongsTo(
+            "Users",
+            [
+                "className" => '\Wrsft\Model\Table\UsersTable',
+                "foreignKey" => "user_id"
+            ]
+        );
+    }
+
+    public function registerUser(UserEntity $user, EventEntity $event, $transaction){
+        //todo: dependence on transaction
     }
 
     public function validationDefault(Validator $validator)
     {
+        $validator
+            ->requirePresence(
+                ["user_id", "event_id", "transaction_id"],
+                __d(self::$domain, "{0} presence required", "user, event, and transaction"))
+            ->uuid("user_id")->uuid("event_id")->uuid("transaction_id");
+
+        return $validator;
     }
 
 }

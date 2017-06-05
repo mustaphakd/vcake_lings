@@ -26,13 +26,14 @@ class EventsTable extends Table
         "description" => ["type" => "text", "length" => "medium"],
         "start_date" => ["type" => "date", "null" => false],
         "end_date" => ["type" => "date", "null" => false],
-        "default_cost" => ["type" => "decimal", "unsigned" => true],
-        "min_cost" => ["type" => "decimal", "unsigned" => true],
+        "default_cost" => ["type" => "decimal", "unsigned" => true], //as seen by non affiliated
+        "min_cost" => ["type" => "decimal", "unsigned" => true], // mandated by the affiliated. upper lower bound
         "max_participants" => ["type" => "integer", "unsigned" => true],
         "currency" => ["type" => "string", "fixed" => false, "length" => 5],
         "video_path" => ["type" => "string", "fixed" => false, "length" => 2200],
         "status" => ["type" => "string", "fixed" => false, "length" => 6], //open | closed | soon
         "location_id" => ["type" => "uuid"],
+        "visible" => ["type" => "string", "default" => "F", "fixed" => true, "length" => 1],
         "_constraints" => [
             "prim" => [
                 "type" => "primary",
@@ -63,6 +64,46 @@ class EventsTable extends Table
             [
                 "type" => TableSchema::INDEX_INDEX,
                 "columns" => ["title"]
+            ]
+        );
+
+        $this->hasMany(
+            "EventsResellers",
+            [
+                "className" => '\Wrsft\Model\Table\EventsResellersTable',
+                "foreignKey" => 'event_id',
+                "cascade" => false
+            ]
+        );
+
+        $this->belongsToMany(
+            "Resellers",
+            [
+                "className" => '\Wrsft\Model\Table\UsersTable',
+                'through' => '\Wrsft\Model\Table\EventsResellersTable',
+                "foreignKey" => 'event_id',
+                "targetForeignKey" => "user_id",
+                "cascade" => false
+            ]
+        );
+
+        $this->belongsToMany(
+            "Timelines",
+            [
+                "className" => "\Wrsft\Model\Table\TimeLinesTable",
+                "through" => '\Wrsft\Model\Table\EventsTimeLinesTable',
+                "foreignKey" => "event_id",
+                "targetForeignKey" => "time_line_id",
+                "cascade" => false
+            ]
+        );
+
+        $this->hasMany(
+            "Registrations",
+            [
+                "className" => '\Wrsft\Model\Table\EventRegistrationsTable',
+                "foreignKey" => "event_id",
+                "cascade" => false
             ]
         );
     }
@@ -112,7 +153,29 @@ class EventsTable extends Table
                         __d(self::$domain, "starting date must be less than ending date")
                     ]
                 ])
-            ->uuid("location_id", __d(self::$domain, "valid {0} reference required", "location"));
+            ->uuid("location_id", __d(self::$domain, "valid {0} reference required", "location"))
+            ->add(
+                "visible",
+                [
+                    "visible_validation" => [
+                        "rule" => function($value, $context){
+
+                            if(empty($value))
+                                return false;
+
+                            if(
+                                $value === 'T' || $value === 't' ||
+                                $value === 'F' || $value === 'f'){
+                                return true;
+                            }
+
+                            return false;
+
+
+                        },
+                        __d(self::$domain, "visibility must be set to either T or F")
+                    ]
+                ]);
 
         return $validator;
     }

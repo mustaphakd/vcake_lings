@@ -49,14 +49,41 @@ class EventsResellersTable extends Table
         parent::initialize($config);
 
         $this->setSchema(self::SCHEMA);
+
+        $this->belongsTo(
+            "Events",
+            [
+                "className" => '\Wrsft\Model\Table\EventsTable',
+                "foreignKey" => "event_id"
+            ]
+        );
+
+        $this->belongsTo(
+            "Resellers",
+            [
+                "className" => '\Wrsft\Model\Table\UsersTable',
+                "foreignKey" => "user_id"
+            ]
+        );
     }
 
-    public function addEventToReseller(UserEntity $user, EventEntity $event){
+    public function addEventToReseller(UserEntity $user, EventEntity $event, $isNew = false){
 
+        //ToDo: logic to add event to resellers
+        //pay attention to new and update events
     }
 
     public function validationDefault(Validator $validator)
     {
+        $validator
+            ->requirePresence(
+                ["user_id", "event_id", "cost"],
+                true,
+                __d(self::$domain, "{0} presence required", "user, event, cost"))
+            ->uuid("user_id")->uuid("event_id")
+            ->decimal("cost");
+
+        return $validator;
     }
 
 }

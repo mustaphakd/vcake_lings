@@ -29,7 +29,7 @@ class EventsTableTest extends TestCase
         $this->Events = TableRegistry::get(
             "Events",
             [
-                "className" => 'Wrsft\Model\Table\EventsTable'
+                "className" => 'Wrsft\Model\Table\EventsTable',
             ]
         );
     }

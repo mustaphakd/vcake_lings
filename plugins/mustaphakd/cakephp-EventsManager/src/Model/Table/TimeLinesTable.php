@@ -9,6 +9,7 @@
 namespace Wrsft\Model\Table;
 
 
+use Cake\Database\Schema\TableSchema;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
@@ -19,21 +20,49 @@ class TimeLinesTable extends Table
         "start" => ["type" => "time", "null" => false],
         "end" => ["type" => "time", "null" => false],
         "synopsys" => ["type" => "text", "length" => "tiny"],
-        "image" => ["type" => "string"]
+        "image" => ["type" => "string", "fixed" => false, "length" => 100]
     ];
 
     private static $domain = 'Wrsft\TimeLines';
 
     public function initialize(array $config)
     {
+        $this->setTable("time_line");
         $this->setDisplayField("start");
         $this->setEntityClass('Wrst\Model\Entity\TimeLineEntity');
 
         $this->setSchema(self::SCHEMA);
+
+        $this->belongsToMany(
+            "Events",
+            [
+                "className" => "\Wrsft\Model\Table\EventsTable",
+                "through" => '\Wrsft\Model\Table\EventsTimeLinesTable',
+                "foreignKey" => "time_line_id",
+                "targetForeignKey" => "event_id",
+                "cascade" => false
+            ]
+        );
     }
 
     public function validationDefault(Validator $validator)
     {
+        $validator
+            ->requirePresence(
+                ["start", "end", "synopsys"],
+                true,
+                __d(self::$domain, '{0} presence required', "start and end time, synopsys")
+            )
+            ->time("start", __d(self::$domain, "time format required for {0}", "start"))
+            ->time("end", __d(self::$domain, "time format required for {0}", "end"))
+            ->lengthBetween("synopsys", [1, TableSchema::LENGTH_TINY])
+            ->maxLength(
+                "image",
+                100,
+                __d(self::$domain, "Maximum allowed characters for image is 100"));
+
+        return $validator;
+
     }
 
 
