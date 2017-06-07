@@ -13,6 +13,23 @@ use Cake\Auth\DefaultPasswordHasher;
 use Cake\Core\Exception\Exception;
 use Cake\ORM\Entity;
 
+
+/**
+ * Class UserEntity
+ * @package Wrsft\Model\Entity
+ *
+ * @property string $id
+ * @property string $first_name
+ * @property string $last_name
+ * @property string $email
+ * @property string $account_confirmation_hash
+ * @property string $confirmed
+ * @property string $disabled
+ * @property string $password
+ * @property datetime $created
+ * @property datetime $modified
+ * @property date $birth_date
+ */
 class UserEntity extends Entity
 {
     public $_accessible = [

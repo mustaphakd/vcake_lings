@@ -63,5 +63,7 @@ class RolesTable extends Table
 
                 ]
             );
+
+        return $validator;
     }
 }

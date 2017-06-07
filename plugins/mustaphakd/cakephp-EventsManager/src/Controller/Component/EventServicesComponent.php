@@ -93,7 +93,7 @@ class EventServicesComponent extends Component
         return $this->Locations->get($locaitonId);
     }
 
-    public function insert_events(array $events, array $timelines, array $images, array $tags){
+    public function insert_events(array $events, array $timelines = [], array $images = [], array $tags = []){
 
         if(empty($events))
         {
@@ -170,7 +170,7 @@ class EventServicesComponent extends Component
         return $response;
     }
 
-    public function update_event(array $event, array $timelines, array $images, array $tags){
+    public function update_event(array $event, array $timelines = [], array $images = [], array $tags = []){
 
         if(empty($event))
         {

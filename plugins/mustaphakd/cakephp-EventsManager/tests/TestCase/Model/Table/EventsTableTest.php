@@ -9,8 +9,10 @@
 namespace Wrsft\Test\TestCase\Model\Table;
 
 
+use Cake\Core\Configure;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
+use Cake\Utility\Text;
 
 class EventsTableTest extends TestCase
 {
@@ -20,7 +22,9 @@ class EventsTableTest extends TestCase
      */
     public $Events;
 
-    public $fixtures = ['Fixture.Wrsft.Events'];
+   // public $fixtures = []; // ['plugin.Wrsft.Events'];
+    public $autoFixtures = false;
+
 
     public function setUp()
     {
@@ -29,9 +33,34 @@ class EventsTableTest extends TestCase
         $this->Events = TableRegistry::get(
             "Events",
             [
-                "className" => 'Wrsft\Model\Table\EventsTable',
+                "className" => '\Wrsft\Model\Table\EventsTable',
             ]
         );
+
+        Configure::write(
+            'Fixture.Wrsft.EventsLocationIds',
+            [
+                Text::uuid(),
+                Text::uuid(),
+                Text::uuid()
+            ]);
+
+
+        $fixtureManger = $this->fixtureManager;
+        $this->fixtures = ['plugin.Wrsft.Events'];
+        $testObject = $this;
+
+        $closure = \Closure::bind(
+            function () use($fixtureManger, $testObject){
+               call_user_func(array($fixtureManger, "_loadFixtures"),$testObject);
+            },
+            null,
+            $fixtureManger
+        );
+
+        $closure();
+
+        $this->loadFixtures("Events");
     }
 
     public function test_retrieve_all_events_succeed(){

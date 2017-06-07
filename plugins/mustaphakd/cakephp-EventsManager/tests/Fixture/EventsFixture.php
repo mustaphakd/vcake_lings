@@ -23,6 +23,7 @@ class EventsFixture extends TestFixture
         parent::init();
 
         if(Configure::check('Fixture.Wrsft.EventsLocationIds')){
+
             $arr = Configure::read('Fixture.Wrsft.EventsLocationIds');
             $this->records = [];
 
@@ -30,7 +31,7 @@ class EventsFixture extends TestFixture
             $count = count($events);
 
             for($i = 0; $i < $count; $i++){
-                $events[$i]->location_id = $arr[$i];
+                $events[$i]["location_id"] = $arr[$i];
                 array_push($this->records, $events[$i]);
             }
         }

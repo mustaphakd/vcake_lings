@@ -9,13 +9,16 @@
 namespace Wrsft\Test\TestCase\Controller\Component;
 
 
+use Cake\Chronos\Date;
 use Cake\Controller\ComponentRegistry;
+use Cake\Core\Configure;
 use Cake\Event\Event;
 use Cake\Event\EventManager;
-use Cake\Network\Http\Request;
-use Cake\Network\Http\Response;
+use Cake\Http\ServerRequest;
+use Cake\Http\Response;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
+use Cake\Utility\Text;
 use Wrsft\Controller\Component\EventServicesComponent;
 
 class EventServicesComponentTest extends TestCase
@@ -37,23 +40,32 @@ class EventServicesComponentTest extends TestCase
      */
     public $EventsResellers;
 
-    public $fixtures = ['plugin.Wrsft.Events'];
+    //public $fixtures = ['plugin.Wrsft.Events', 'plugin.Wrsft.Users', 'plugin.Wrsft.Roles'];
+    public $autoFixtures = false;
 
     public function setUp()
     {
+        Configure::write(
+            'Fixture.Wrsft.EventsLocationIds',
+            [
+                Text::uuid(),
+                Text::uuid(),
+                Text::uuid()
+            ]);
+
         parent::setUp();
 
-        $request = new Request();
+        $request = new ServerRequest();
         $response = new Response();
 
         $controller = $this->getMockBuilder('Cake\Controller\Controller')
-            ->setConstructorArgs($request, $response)
+            ->setConstructorArgs([$request, $response])
             ->setMethods(null)
             ->getMock();
 
         $registry = new ComponentRegistry($controller);
 
-        $registry->load(
+        $this->component = $registry->load(
             "EventServices",
             [
                 'className' => '\Wrsft\Controller\Component\EventServicesComponent'
@@ -72,6 +84,16 @@ class EventServicesComponentTest extends TestCase
             [
                 "className" => '\Wrsft\Model\Table\EventsResellersTable'
             ]
+        );
+
+        $handle = $this;
+
+        $this->preLoadFixtures(
+            ['plugin.Wrsft.Events', 'plugin.Wrsft.Users', 'plugin.Wrsft.Roles'],
+
+            function() use($handle){
+                $handle->loadFixtures('Events', 'Users', 'Roles');
+            }
         );
 
         $this->provisionResellers();
@@ -158,7 +180,7 @@ class EventServicesComponentTest extends TestCase
     public function test_update_event_minCost_increased_succeed($insertionResult){
 
         EventManager::instance()->on(EventServicesComponent::EVENT_UPDATED, function(Event $event, $subject, $options){});
-        $this->provisionResellers();
+        //$this->provisionResellers();
 
         $event = $insertionResult["events"]["entities"][0];
 
@@ -168,6 +190,8 @@ class EventServicesComponentTest extends TestCase
         //only notify reseller  min cost if more than default_cost || new min cost is more than reseller min_cost
 
         $updateResult = $this->component->update_event([$event]);
+
+        pr($updateResult);
 
         $eventResellers = $this->EventsResellers->find()->toArray();
 
@@ -198,6 +222,24 @@ class EventServicesComponentTest extends TestCase
         $event->min_cost = 400.51;
         $event->default_cost = 445;
         //only notify reseller  min cost if more than default_cost || new min cost is more than reseller min_cost
+
+        $updateResult = $this->component->update_event([$event]);
+
+        pr($updateResult);
+
+        $eventResellers = $this->EventsResellers->find()->toArray();
+
+        $this->assertCount(2, $eventResellers);
+
+        $updated = true;
+        foreach ($eventResellers as $reseller){
+            if($reseller->cost !== $event->min_cost){
+                $updated = false;
+                break;
+            }
+        }
+
+        $this->assertTrue($updated, "Failed updating resellers");
     }
 
     /**
@@ -309,6 +351,24 @@ class EventServicesComponentTest extends TestCase
             ]);
 
         return $entities;
+    }
+
+    private function preLoadFixtures(array $fixtures, $callable){
+
+        $fixtureManager = $this->fixtureManager;
+        $testObject = $this;
+        $this->fixtures = $fixtures;
+
+        $closure = \Closure::bind(
+            function() use($fixtureManager, $testObject){
+                call_user_func(array($fixtureManager, "_loadFixtures"), $testObject);
+            },
+            null,
+            $fixtureManager
+        );
+
+        $closure();
+        $callable();
     }
 
 }

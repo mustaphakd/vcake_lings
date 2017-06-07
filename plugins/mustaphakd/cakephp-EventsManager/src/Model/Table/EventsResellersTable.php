@@ -13,6 +13,7 @@ use Cake\Validation\Validator;
 use Wrsft\Model\Entity\EventEntity;
 use Wrsft\Model\Entity\UserEntity;
 
+
 class EventsResellersTable extends Table
 {
     private static $domain = 'Wrsft\EventResellers';
@@ -32,7 +33,7 @@ class EventsResellersTable extends Table
             ],
             "user_fk" => [
                 "type" => "foreign",
-                "columns" => "user_id",
+                "columns" => ["user_id"],
                 "references" => ["users", "id"]
             ],
             "event_fk" => [
@@ -69,8 +70,54 @@ class EventsResellersTable extends Table
 
     public function addEventToReseller(UserEntity $user, EventEntity $event, $isNew = false){
 
-        //ToDo: logic to add event to resellers
-        //pay attention to new and update events
+        $data = [
+            "user_id" => $user->id,
+            "event_id" => $event->id,
+            "cost" => $event->min_cost,
+            "auto_update" => 'T'
+        ];
+
+        if($isNew){
+            $entity = $this->newEntity($data);
+            if($entity->getErrors()){
+                throw new \Exception("Error creating Event-Reseller entry");
+            }
+
+            $this->save($entity);
+            return;
+        }
+
+        unset($data["cost"]);
+        unset($data["auto_update"]);
+
+        $existingEntity = $this->find()->where($data)->firstOrFail();
+        $dirty = false;
+
+        if($existingEntity->cost > $event->default_cost){
+
+            $existingEntity->cost = $event->default_cost;
+            $existingEntity->setDirty("cost", true);
+            $dirty = true;
+
+        }
+        elseif ($existingEntity->cost < $event->min_cost){
+
+            $existingEntity->cost = $event->min_cost;
+            $existingEntity->setDirty("cost", true);
+            $dirty = true;
+        }
+        elseif ($existingEntity->auto_update === 'T'){
+
+            $existingEntity->cost = $event->min_cost;
+            $existingEntity->setDirty("cost", true);
+            $dirty = true;
+        }
+
+        if($dirty){
+            $this->save($existingEntity);
+        }
+
+        return;
     }
 
     public function validationDefault(Validator $validator)

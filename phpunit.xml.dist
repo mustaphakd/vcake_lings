@@ -23,6 +23,9 @@
         <testsuite name="mustaphakd cakephp UsersManager">
             <directory>./plugins/mustaphakd/cakephp-UsersManager/tests/TestCase</directory>
         </testsuite>
+        <testsuite name="mustaphakd cakephp EventsManager">
+            <directory>./plugins/mustaphakd/cakephp-EventsManager/tests/TestCase</directory>
+        </testsuite>
     </testsuites>
 
     <!-- Setup a listener for fixtures -->
