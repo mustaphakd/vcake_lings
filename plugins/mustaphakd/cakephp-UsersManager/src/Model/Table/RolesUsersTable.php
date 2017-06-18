@@ -14,18 +14,19 @@ class RolesUsersTable extends  Table
 {
     public function initialize(array $config)
     {
+        $this->setTable("roles_users");
         parent::initialize($config);
 
         $this->belongsTo("Users", [
-            "className" => "Wrsft\Model\Table\UsersTable"
+            "className" => '\Wrsft\Model\Table\UsersTable'
         ])
-            ->setForeignKey("userId")
+            ->setForeignKey("user_id")
         ;
 
         $this->belongsTo("Roles", [
             "className" => "Wrsft\Model\Table\RolesTable"
         ])
-            ->setForeignKey("roleId")
+            ->setForeignKey("role_id")
         ;
     }
 }

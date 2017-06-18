@@ -32,7 +32,7 @@ class UsersFixture extends  TestFixture
         'password_reset_hash' => ['type' => 'uuid', 'null' => true],
         'birth_date' => ['type' => 'date'],
         '_constraints' => [
-            'unique_email' => [
+            'unique' => [
                 'type' => "unique",
                 'columns' => ["email"]
             ],

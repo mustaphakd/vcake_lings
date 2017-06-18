@@ -14,12 +14,13 @@ use Cake\TestSuite\Fixture\TestFixture;
 use Cake\Utility\Text;
 use Wrsft\Model\Table\EventsResellersTable;
 
-class EventResellerFixture extends TestFixture
+class EventsResellersFixture extends TestFixture
 {
     public $fields = EventsResellersTable::SCHEMA;
 
     public function init()
     {
+        $this->table = "events_resellers";
         parent::init();
 
         if(Configure::check('Fixtures.Wrsft.EventsResellers')){
@@ -27,9 +28,10 @@ class EventResellerFixture extends TestFixture
             $this->records = [];
 
             foreach ($arr as $entity){
-                $entity->id = Text::uuid();
-                array_push($arr, $entity);
+                $entity["id"] = Text::uuid();
+                array_push($this->records, $entity);
             }
+            unset($entity);
         }
     }
 

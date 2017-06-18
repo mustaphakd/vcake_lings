@@ -14,6 +14,7 @@ use Cake\Database\Schema\TableSchema;
 use Cake\ORM\Table;
 use Cake\ORM\TableRegistry;
 use Cake\Validation\Validator;
+use Symfony\Component\Finder\Comparator\DateComparator;
 use Wrsft\Database\Point;
 use Wrsft\Model\Entity\EventEntity;
 
@@ -80,7 +81,7 @@ class EventsTable extends Table
             "Resellers",
             [
                 "className" => '\Wrsft\Model\Table\UsersTable',
-                'through' => '\Wrsft\Model\Table\EventsResellersTable',
+                'through' => new EventsResellersTable(),
                 "foreignKey" => 'event_id',
                 "targetForeignKey" => "user_id",
                 "cascade" => false
@@ -140,15 +141,19 @@ class EventsTable extends Table
                 [
                     "date_comparison" => [
                         "rule" => function ($value, $context){
-                    pr($context);
-                            if (empty($value) || !isset($context["end_date"]) || empty($context["end_date"])){
+
+                            if (empty($value) || !isset($context["data"]["end_date"]) || empty($context["data"]["end_date"])){
                                 return false;
                             }
 
                             $starting_date = Date::parse($value);
-                            $ending_date = Date::parse($context["end_date"]);
+                            $ending_date = Date::parse($context["data"]["end_date"]);
 
-                            return $ending_date > $starting_date;
+
+                            if(($ending_date->gt($starting_date))){
+                                return true;
+                            }
+                            return false;
                          },
                         __d(self::$domain, "starting date must be less than ending date")
                     ]

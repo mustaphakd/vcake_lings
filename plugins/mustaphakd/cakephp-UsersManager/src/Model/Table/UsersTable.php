@@ -23,6 +23,7 @@ class UsersTable extends Table
     private static $domain = 'Wrsft\User';
     public function initialize(array $config)
     {
+        $this->setTable("users");
         $this->setDisplayField('email');
         $this->setEntityClass('Wrsft\Model\Entity\UserEntity');
 
@@ -30,7 +31,7 @@ class UsersTable extends Table
             "Roles",
             [
                 "className" => 'Wrsft\Model\Table\RolesTable',
-                "trough" => 'Wrsft\Model\Table\RolesUsersTable',
+                "trough" => new RolesUsersTable(),
                 "targetForeignKey" => "role_id",
                 "foreignKey" => "user_id"
             ]);

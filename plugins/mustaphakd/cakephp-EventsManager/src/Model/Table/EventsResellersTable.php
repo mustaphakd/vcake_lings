@@ -17,7 +17,9 @@ use Wrsft\Model\Entity\UserEntity;
 class EventsResellersTable extends Table
 {
     private static $domain = 'Wrsft\EventResellers';
-
+/*
+ *
+ * */
     const SCHEMA = [
         "id" => ["type" => "uuid"],
         "user_id" => ["type" => "uuid", "null" => false],
@@ -31,12 +33,12 @@ class EventsResellersTable extends Table
                 "type" => "primary",
                 "columns" => ["id"]
             ],
-            "user_fk" => [
+            "eventreseller_user_fk" => [
                 "type" => "foreign",
                 "columns" => ["user_id"],
                 "references" => ["users", "id"]
             ],
-            "event_fk" => [
+            "eventreseller_event_fk" => [
                 "type" => "foreign",
                 "columns" => ["event_id"],
                 "references" => ["events", "id"]
@@ -46,6 +48,7 @@ class EventsResellersTable extends Table
 
     public function initialize(array $config)
     {
+        $this->setTable("events_resellers");
         $this->setEntityClass('Wrsft\Model\Entity\EventResellerEntity');
         parent::initialize($config);
 
@@ -60,7 +63,7 @@ class EventsResellersTable extends Table
         );
 
         $this->belongsTo(
-            "Resellers",
+            "Users",
             [
                 "className" => '\Wrsft\Model\Table\UsersTable',
                 "foreignKey" => "user_id"
@@ -89,8 +92,9 @@ class EventsResellersTable extends Table
 
         unset($data["cost"]);
         unset($data["auto_update"]);
-
+        debug("before calle");
         $existingEntity = $this->find()->where($data)->firstOrFail();
+        debug("after calle");
         $dirty = false;
 
         if($existingEntity->cost > $event->default_cost){

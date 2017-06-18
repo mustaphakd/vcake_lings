@@ -25,7 +25,7 @@ class RolesTable extends Table
             "Users",
             [
                 "className" => "Wrsft\Model\Table\UsersTable",
-                "through" => "Wrsft\Model\Table\RolesUsersTable",
+                "through" => new RolesUsersTable() ,
                 "targetForeignKey" => "user_id",
                 "foreignKey" => "role_id"
             ]);

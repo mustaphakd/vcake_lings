@@ -14,6 +14,7 @@ use Cake\Event\Event;
 use Cake\Event\EventManager;
 use Cake\ORM\Entity;
 use Cake\ORM\TableRegistry;
+use Wrsft\Model\Entity\EventEntity;
 use Wrsft\Model\Entity\UserEntity;
 
 class EventServicesComponent extends Component
@@ -38,6 +39,11 @@ class EventServicesComponent extends Component
      * @var \Wrsft\Model\Table\RolesTable $Roles.
      */
     public $Roles;
+
+    /**
+     * @var \Wrsft\Model\Table\UsersTable $Users.
+     */
+    public $Users;
 
 
     /**
@@ -68,6 +74,13 @@ class EventServicesComponent extends Component
             ]
         );
 
+        $this->Users = TableRegistry::get(
+            "Users",
+            [
+                "className" => '\Wrsft\Model\Table\UsersTable'
+            ]
+        );
+
         $this->EventsResellers = TableRegistry::get(
             "EventsResellers",
             [
@@ -76,6 +89,13 @@ class EventServicesComponent extends Component
         );
     }
 
+
+    /**
+     * @param bool $visibles. Default is true to retrieve only Events witht their visibility set to true. if false, \
+     * all events are returned
+     * @param array|null $options. clause for where statement
+     * @return array
+     */
     public function retrieveEvents($visibles = true, array $options = null){
 
         if($options === null){
@@ -83,7 +103,7 @@ class EventServicesComponent extends Component
         }
 
         if($visibles)
-            $options["visible"] = $visibles;
+            $options["visible"] = 'T';
 
         return $this->Events->find()->where($options)->toArray();
     }
@@ -170,7 +190,7 @@ class EventServicesComponent extends Component
         return $response;
     }
 
-    public function update_event(array $event, array $timelines = [], array $images = [], array $tags = []){
+    public function update_event(EventEntity $event, array $timelines = [], array $images = [], array $tags = []){
 
         if(empty($event))
         {
@@ -180,7 +200,10 @@ class EventServicesComponent extends Component
             ]);
         }
 
-        $event = $this->Events->patchEntity($event);
+        $foundEvent = $this->Events->get($event->id);
+        unset($event["id"]);
+
+        $event = $this->Events->patchEntity($foundEvent, $event, ['associated' => false]);
         $errorMessages = $event->getErrors();
 
         if( $errorMessages != false){
@@ -210,7 +233,7 @@ class EventServicesComponent extends Component
         $response = $this->insertionResult(
             [
                 "entities" => $event,
-                "message" => __d(self::domain, "{0}{1} were created", 1, "events")
+                "message" => __d(self::domain, "{0} {1} {3} created", 1, "event", "was")
             ],
             $timelinesMessages,
             $imagesMessages,
@@ -228,13 +251,8 @@ class EventServicesComponent extends Component
     }
 
     private function notifyResellers(array $events, $isNew = false){
-        $resellers = $this->Roles->find()->contain(["Users"])
-            ->where([
-                "Role.name" => "reseller",
-                "User.confirmed" => 'T',
-                "User.disabled" => 'F'
-            ])
-            ->toArray();
+
+        $resellers = $this->GetResellers();
 
         if(empty($resellers))
             return false;
@@ -299,6 +317,26 @@ class EventServicesComponent extends Component
             "tags" => $tagsResponse,
             "timelines" => $timelinesResponse
         ];
+    }
+
+    /**
+     * @return array of Resellers
+     */
+    public function GetResellers()
+    {
+        $query = $this->Users->find()
+            ->where([
+                "confirmed" => 'T',
+                "disabled" => 'F'
+            ])
+            ->innerJoinWith(
+                "Roles",
+                function ($q) {
+                    return $q->where(["name" => "reseller"]);
+                });
+
+        $resellers = $query->toArray();
+        return $resellers;
     }
 
 }

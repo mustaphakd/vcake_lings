@@ -12,14 +12,17 @@ namespace Wrsft\Test\TestCase\Controller\Component;
 use Cake\Chronos\Date;
 use Cake\Controller\ComponentRegistry;
 use Cake\Core\Configure;
+use Cake\Datasource\ConnectionManager;
 use Cake\Event\Event;
 use Cake\Event\EventManager;
 use Cake\Http\ServerRequest;
 use Cake\Http\Response;
 use Cake\ORM\TableRegistry;
+use Cake\TestSuite\Fixture\TestFixture;
 use Cake\TestSuite\TestCase;
 use Cake\Utility\Text;
 use Wrsft\Controller\Component\EventServicesComponent;
+use Wrsft\Test\Fixture\EventsResellersFixture;
 
 class EventServicesComponentTest extends TestCase
 {
@@ -29,18 +32,32 @@ class EventServicesComponentTest extends TestCase
      */
     public $component;
 
-
     /**
  * @var \Wrsft\Model\Table\EventsTable $Events;
  */
     public $Events;
 
     /**
+     * @var \Wrsft\Model\Table\UsersTable $Users;
+     */
+    public $Users;
+
+    /**
+     * @var \Wrsft\Model\Table\RolesTable $Roles;
+     */
+    public $Roles;
+
+    /**
+     * @var \Wrsft\Model\Table\RolesUsersTable $RolesUsers;
+     */
+    public $RolesUsers;
+
+    /**
      * @var \Wrsft\Model\Table\EventsResellersTable $EventsResellers;
      */
     public $EventsResellers;
 
-    //public $fixtures = ['plugin.Wrsft.Events', 'plugin.Wrsft.Users', 'plugin.Wrsft.Roles'];
+    public $fixtures = []; //'plugin.Wrsft.Events', 'plugin.Wrsft.Users', 'plugin.Wrsft.Roles'];
     public $autoFixtures = false;
 
     public function setUp()
@@ -65,17 +82,29 @@ class EventServicesComponentTest extends TestCase
 
         $registry = new ComponentRegistry($controller);
 
-        $this->component = $registry->load(
-            "EventServices",
+
+        $this->Users = TableRegistry::get(
+            "Users",
             [
-                'className' => '\Wrsft\Controller\Component\EventServicesComponent'
+                "className" => '\Wrsft\Model\Table\UsersTable'
             ]
         );
-
+        $this->Roles = TableRegistry::get(
+            "Roles",
+            [
+                "className" => '\Wrsft\Model\Table\RolesTable'
+            ]
+        );
         $this->Events = TableRegistry::get(
             "Events",
             [
                 "className" => '\Wrsft\Model\Table\EventsTable'
+            ]
+        );
+        $this->RolesUsers = TableRegistry::get(
+            "RolesUsers",
+            [
+                "className" => '\Wrsft\Model\Table\RolesUsersTable'
             ]
         );
 
@@ -96,12 +125,31 @@ class EventServicesComponentTest extends TestCase
             }
         );
 
-        $this->provisionResellers();
+        $this->provision_rolesUsers();
+
+        $this->component = $registry->load(
+            "EventServices",
+            [
+                'className' => '\Wrsft\Controller\Component\EventServicesComponent'
+            ]
+        );
+
+    }
+
+    public function  tearDown()
+    {
+        $this->dropTable(
+            $this->EventsResellers->getTable(),
+            new EventsResellersFixture());
+
+        parent::tearDown();
     }
 
     // all inserts should raise events and notify resellers
 
     public function test_retrieve_all_events_succeed(){
+
+       $this->provisionResellers();
 
         $events = $this->component->retrieveEvents(false);
 
@@ -121,24 +169,26 @@ class EventServicesComponentTest extends TestCase
 
     public function test_insert_simple_event_succeed(){
 
-        EventManager::instance()->on("Event.created", function(Event $event, $subject, $options){});
-
         $this->provisionResellers();
 
-        $this->EventsResellers->deleteAll();
+        $eventCalled = false;
+        EventManager::instance()->on(
+            EventServicesComponent::EVENT_CREATED,
+            function(Event $event) use (&$eventCalled){
+                $eventCalled = true;
+            });
+
+        $this->EventsResellers->deleteAll([]);
 
         $insertionResult = $this->component->insert_events([self::$ecowas_event]);
 
-
-        pr($insertionResult);
-
         $this->assertEquals(
-            "Forum ECOWAS", $insertionResult["events"][0]->title);
+            "Forum ECOWAS", $insertionResult["events"]['entities'][0]->title);
 
         $this->assertCount(4, $this->component->retrieveEvents(false));
 
         //assert event raised
-        $this->assertEventFired("Event.created");
+        $this->assertTrue($eventCalled, "Event Created event should have been called");
         // assert resellers notified
         $this->assertCount(2, $this->EventsResellers->find()->toArray());
 
@@ -147,28 +197,27 @@ class EventServicesComponentTest extends TestCase
 
     public function test_insert_invalid_simple_event_fail(){
 
+        $this->provisionResellers();
+
         $eventRaised = false;
-        EventManager::instance()->on("Event.created", function(Event $event, $subject, $options) use($eventRaised){
-            $eventRaised = true;
+        EventManager::instance()->on(
+            EventServicesComponent::EVENT_CREATED,
+            function(Event $event) use(&$eventRaised){
+                $eventRaised = true;
         });
 
         $ecowas_evt = self::$ecowas_event;
         unset($ecowas_evt["title"]);
+        $this->EventsResellers->deleteAll([]);
 
         $insertionResult = $this->component->insert_events([$ecowas_evt]);
 
-        pr($insertionResult);
-
-        $this->assertEmpty($insertionResult["events"]);
-
+        $this->assertEmpty($insertionResult["events"]["entities"]);
         $this->assertCount(3, $this->component->retrieveEvents(false));
-
         //assert event not raised
-        $this->assertFalse($eventRaised);
-
+        $this->assertFalse($eventRaised,  "Event Created event should not have been called");
         //assert resellers not notified
         $this->assertCount(0, $this->EventsResellers->find()->toArray());
-
     }
 
     /**
@@ -179,19 +228,28 @@ class EventServicesComponentTest extends TestCase
      */
     public function test_update_event_minCost_increased_succeed($insertionResult){
 
-        EventManager::instance()->on(EventServicesComponent::EVENT_UPDATED, function(Event $event, $subject, $options){});
-        //$this->provisionResellers();
+        $this->provisionResellers();
+        $eventRaised = false;
 
-        $event = $insertionResult["events"]["entities"][0];
+        EventManager::instance()->on(
+            EventServicesComponent::EVENT_UPDATED,
+            function(Event $event) use (&$eventRaised){
+                $eventRaised = true;
+            });
 
+        $event =  $insertionResult["events"]["entities"][0];
         $event->sub_header = "Breaking news!";
         $event->min_cost = 470;
 
         //only notify reseller  min cost if more than default_cost || new min cost is more than reseller min_cost
 
-        $updateResult = $this->component->update_event([$event]);
+        $updateResult = $this->component->update_event($event);
 
-        pr($updateResult);
+        debug($updateResult);
+
+        $resellersAttempt = $event->Resellers->find()->toArray();
+
+        debug($resellersAttempt);
 
         $eventResellers = $this->EventsResellers->find()->toArray();
 
@@ -205,6 +263,8 @@ class EventServicesComponentTest extends TestCase
             }
         }
 
+        $this->assertTrue($eventRaised, "Event's update event should have been called");
+
         $this->assertTrue($updated, "Failed updating resellers");
     }
 
@@ -216,22 +276,21 @@ class EventServicesComponentTest extends TestCase
      */
     public function test_update_event_defaultCost_decreased_moreThan_prevMinCost_succeed($insertionResult){
 
+        $this->provisionResellers();
         $event = $insertionResult["events"]["entities"][0];
-
         $event->sub_header = "Breaking news!";
         $event->min_cost = 400.51;
         $event->default_cost = 445;
         //only notify reseller  min cost if more than default_cost || new min cost is more than reseller min_cost
 
-        $updateResult = $this->component->update_event([$event]);
+        $updateResult = $this->component->update_event($event);
 
-        pr($updateResult);
+        debug($updateResult);
 
         $eventResellers = $this->EventsResellers->find()->toArray();
-
         $this->assertCount(2, $eventResellers);
-
         $updated = true;
+
         foreach ($eventResellers as $reseller){
             if($reseller->cost !== $event->min_cost){
                 $updated = false;
@@ -271,12 +330,13 @@ class EventServicesComponentTest extends TestCase
     ];
 
     private function create_visible_events(){
-        $arr = $this->Events->newEntities([
-            self::$ecowas_event
+
+        $data = [
+            $this::$ecowas_event
             ,
             [
                 "title" => "Forum BECAO",
-                "sub_header" => "Sommet des financier de colonies francaise",
+                "sub_header" => "Sommet des financier",
                 "description" => " A sommet where there is more blah blah and photo ups for best suit/out fit.",
                 "start_date" => "2018-05-05",
                 "end_date" => "2018-05-12",
@@ -287,41 +347,28 @@ class EventServicesComponentTest extends TestCase
                 "status" => "soon",
                 "visible" => 'T'
             ]
-        ]);
+        ];
 
-        $this->Events->saveMany($arr);
+        $arr = $this->Events->newEntities($data);
+        $this->Events->saveMany($arr, ["associated" => false]);
     }
 
     private function provisionResellers(){
 
-        $users = TableRegistry::get(
-            "Users",
-            [
-                "className" => '\Wrsft\Model\Table\UsersTable'
-            ]
-        );
+        $resellerRole = $this->Roles->newEntity([ "name" => EventServicesComponent::ROLE_RESELLER]);
+        $resellerRole = $this->Roles->saveOrFail($resellerRole);
 
-        $roles = TableRegistry::get(
-            "Roles",
-            [
-                "className" => '\Wrsft\Model\Table\RolesTable'
-            ]
-        );
+        $password = "Password%1";
 
-        $resellerRole = $roles->newEntity([ "name" => EventServicesComponent::ROLE_RESELLER]);
-        $resellerRole = $roles->saveOrFail($resellerRole);
-
-        $password = "Password_1";
-
-        $entities = $users->newEntities([
+        $entities = $this->Users->newEntities([
             [
                 'first_name' => "Audrey",
                 'last_name' => 'Sekongo',
-                'email' => 'audrey@wrsft.com',
+                'email' => 'audreyane@wrsft.com',
                 'confirmed' => 'T',
                 'disabled' => 'F',
                 'password' => $password,
-                'birth_date' => (new Date('1980-02-22'))->format('Y-m-d H:i:s'),
+                'birth_date' => (new Date('1980-02-22'))->format('Y-m-d'),
                 "roles" => [
                     [
                         "id" => $resellerRole->id
@@ -335,7 +382,7 @@ class EventServicesComponentTest extends TestCase
                 'confirmed' => 'T',
                 'disabled' => 'F',
                 'password' => $password,
-                'birth_date' => (new Date('1985-02-22'))->format('Y-m-d H:i:s'),
+                'birth_date' => (new Date('1985-02-22'))->format('Y-m-d'),
                 "roles" => [
                     [
                         "id" => $resellerRole->id
@@ -344,13 +391,28 @@ class EventServicesComponentTest extends TestCase
             ],
         ]);
 
-        $entities = $users->saveMany(
+        $this->Users->saveMany(
             $entities,
             [
                 "associated" => ["Roles"]
             ]);
 
-        return $entities;
+        $topEvent = $this->Events->find()->firstOrFail();
+        $resellers = $this->component->getResellers();
+
+        $eventResellerFixture = new EventsResellersFixture();
+        $this->createOrTruncateTable($this->EventsResellers->getTable(), $eventResellerFixture);
+
+        Configure::write(
+            'Fixtures.Wrsft.EventsResellers',
+            [
+                ["event_id" => $topEvent->id,  "user_id" => $resellers[0]->id, "cost" => 365]
+            ]);
+
+        $eventResellerFixture->init();
+        $eventResellerFixture->insert(ConnectionManager::get("test"));
+
+        $resellers = $this->component->getResellers();
     }
 
     private function preLoadFixtures(array $fixtures, $callable){
@@ -369,6 +431,58 @@ class EventServicesComponentTest extends TestCase
 
         $closure();
         $callable();
+    }
+
+    private function provision_rolesUsers(){
+        $usersConfig = Configure::read('Fixture.Wrsft.Users');
+
+        Configure::write(
+            'Fixture.Wrsft.UsersRoles', [
+            ["user_id" => $usersConfig[0], "role_id" => 2]
+        ]);
+
+        $handle = $this;
+//
+        $this->preLoadFixtures(
+            ['plugin.Wrsft.Users', 'plugin.Wrsft.Events', 'plugin.Wrsft.Roles', 'plugin.Wrsft.RolesUsers'],
+
+            function() use($handle){
+                $handle->loadFixtures( 'Users', 'Roles', 'RolesUsers','Events' );
+            }
+        );
+    }
+
+    private function createOrTruncateTable($tableName, TestFixture $fixture){
+
+        $connectionInterface =   ConnectionManager::get("test");
+
+        if($this->tableExist($tableName) === true){
+            $fixture->truncate($connectionInterface);
+        }
+        else{
+            $fixture->create($connectionInterface);
+            $fixture->createConstraints($connectionInterface);
+        }
+
+
+    }
+
+    private function dropTable($tableName, TestFixture $fixture){
+        $connectionInterface =   ConnectionManager::get("test");
+
+        if($this->tableExist($tableName) === true){
+            $fixture->truncate($connectionInterface);
+            $fixture->dropConstraints($connectionInterface);
+            $fixture->drop($connectionInterface);
+        }
+    }
+
+    private function tableExist($tableName){
+
+        $connectionInterface =   ConnectionManager::get("test");
+        $tables = $connectionInterface->schemaCollection()->listTables();
+        $tableFound = in_array($tableName, $tables);
+        return $tableFound;
     }
 
 }
