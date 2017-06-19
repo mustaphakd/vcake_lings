@@ -310,9 +310,88 @@ class EventServicesComponentTest extends TestCase
      */
     public function test_update_event_priceChanged_existing_patron_fail($insertionResult){
 
+        $eventRaised = false;
+
+        EventManager::instance()->on(
+            EventServicesComponent::EVENT_UPDATED,
+            function($event) use(&$eventRaised){
+                $eventRaised = true;
+            }
+        );
+
+        $this->provisionResellers();
+        $topEvent = $this->Events->find()->firstOrFail();
+        $this->addPatronsToEvent($topEvent);
+
+        $oldCost = $topEvent->default_cost;
+        $topEvent->default_cost = 700;
+
+        $this->component->update_event($topEvent->toArray());
+
+        $foundEvent = $this->Events->get($topEvent->id);
+
+        $this->assertNotNull($foundEvent, "Weird! existing event should have been found");
+        $this->assertEquals($oldCost, $foundEvent->default_cost, "Event cost shouldn't change when there are existing patrons");
+        $this->assertFalse($eventRaised, "event.updated should not have been raised");
     }
 
     //should only be able to update or delete non-visible -with no registered users
+
+    public function test_register_user_4_event_succeed(){
+    //todo: patron event registration
+    }
+
+    public function test_register_user_4_event_fail(){
+
+    }
+
+    public function test_update_event_with_registeredUsers_fail(){
+
+    }
+
+    public function test_create_simple_timeLine_succeed(){
+
+    }
+
+    public function test_update_simple_timeLine_succeed(){
+
+    }
+
+    public function test_delete_unused_timeLine_succeed(){
+
+    }
+
+    public function test_delete_used_timeLine_fail(){
+
+    }
+
+    public function test_create_event_with_new_timeLine_succeed(){
+
+    }
+
+    public function test_create_event_with_newAndExisting_timeLine_succeed(){
+
+    }
+
+    public function test_create_event_with_existingEdited_timeLine_suceed(){
+
+    }
+
+    public function test_create_event_with_newAndExisting_images_succeed(){
+
+    }
+
+    public function test_update_event_with_newAndExisting_removingMissingIds_images_succeed(){
+
+    }
+
+    public function test_create_event_with_newAndExisting_tags_succeed(){
+
+    }
+
+    public function test_update_event_with_newAndExisting_removingMissingIds_tags_succeed(){
+
+    }
 
     //timeLines, images, tags
 
@@ -401,17 +480,23 @@ class EventServicesComponentTest extends TestCase
                 "associated" => ["Roles"]
             ]);
 
-        $topEvent = $this->Events->find()->firstOrFail();
+        $events = $this->Events->find()->toArray();
         $resellers = $this->component->GetAllResellers();
 
         $eventResellerFixture = new EventsResellersFixture();
         $this->createOrTruncateTable($this->EventsResellers->getTable(), $eventResellerFixture);
 
+        $eventResellers = [];
+
+        foreach($events as $event){
+            foreach ($resellers as $reseller){
+                $eventResellers[] = ["event_id" => $event->id,  "user_id" => $reseller->id, "cost" => 365] ;
+            }
+        }
+
         Configure::write(
             'Fixtures.Wrsft.EventsResellers',
-            [
-                ["event_id" => $topEvent->id,  "user_id" => $resellers[0]->id, "cost" => 365]
-            ]);
+            $eventResellers);
 
         $eventResellerFixture->init();
         $eventResellerFixture->insert(ConnectionManager::get("test"));

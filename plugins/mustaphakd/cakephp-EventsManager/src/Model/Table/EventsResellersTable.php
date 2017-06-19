@@ -94,9 +94,7 @@ class EventsResellersTable extends Table
 
         unset($data["cost"]);
         unset($data["auto_update"]);
-        debug("before calle");
         $existingEntity = $this->find()->where($data)->firstOrFail();
-        debug("after calle");
         $dirty = false;
 
         if($existingEntity->cost > $event->default_cost){
