@@ -190,7 +190,7 @@ class EventServicesComponent extends Component
         return $response;
     }
 
-    public function update_event(EventEntity $event, array $timelines = [], array $images = [], array $tags = []){
+    public function update_event(array $event, array $timelines = [], array $images = [], array $tags = []){
 
         if(empty($event))
         {
@@ -200,10 +200,10 @@ class EventServicesComponent extends Component
             ]);
         }
 
-        $foundEvent = $this->Events->get($event->id);
+        $foundEvent = $this->Events->get($event["id"]);
         unset($event["id"]);
 
-        $event = $this->Events->patchEntity($foundEvent, $event, ['associated' => false]);
+        $event = $this->Events->patchEntity($foundEvent, $event, []);
         $errorMessages = $event->getErrors();
 
         if( $errorMessages != false){
@@ -239,33 +239,33 @@ class EventServicesComponent extends Component
             $imagesMessages,
             $tagsMessages);
 
-        $this->notifyResellers($newEvent, false);
+        $this->notifyResellers([$newEvent], false);
 
         return $response;
     }
 
     public  function __call($name, $arguments)
     {
-        echo "\n method $name called. \n";
-        return false;
+        //echo "\n method $name called. \n";
+        return [];
     }
 
-    private function notifyResellers(array $events, $isNew = false){
+    private function notifyResellers(array $eventEntities, $isNew = false){
 
-        $resellers = $this->GetResellers();
+        $resellers = $this->GetAllResellers();
 
         if(empty($resellers))
             return false;
 
         foreach ($resellers as $reseller){
-            $this->notifyReseller($reseller, $events, $isNew);
+            $this->notifyReseller($reseller, $eventEntities, $isNew);
         }
         return $resellers;
     }
 
-    private function notifyReseller(UserEntity $reseller, array $events, $isNew = false){
+    private function notifyReseller(UserEntity $reseller, array $eventEntities, $isNew = false){
 
-        foreach ($events as $event){
+        foreach ($eventEntities as $event){
             $this->EventsResellers->addEventToReseller(
                 $reseller,
                 $event,
@@ -287,7 +287,7 @@ class EventServicesComponent extends Component
         return $errorMessage;
     }
 
-    private function insertionResult($eventResponse = [], $timelinesResponse = [], $imagesResponse = [], $tagsResponse = []){
+    private function insertionResult(array $eventResponse = [], array $timelinesResponse = [], array $imagesResponse = [], array $tagsResponse = []){
 
         $eventResponse += [
             "entities" => [],
@@ -296,20 +296,26 @@ class EventServicesComponent extends Component
 
 
 
-        $timelinesResponse += [
-            "entities" => [],
-            "message" => __d(self::domain, "{0} were not created", "timelines")
-        ];
+        $timelinesResponse = array_replace_recursive(
+            [
+                "entities" => [],
+                "message" => __d(self::domain, "{0} were not created", "timelines")
+            ],
+            $timelinesResponse);
 
-        $imagesResponse += [
-            "entities" => [],
-            "message" => __d(self::domain, "{0} were not created", "images")
-        ];
+        $imagesResponse = array_replace_recursive(
+            [
+                "entities" => [],
+                "message" => __d(self::domain, "{0} were not created", "images")
+            ],
+            $imagesResponse);
 
-        $tagsResponse += [
-            "entities" => [],
-            "message" => __d(self::domain, "{0} were not created", "tags")
-        ];
+        $tagsResponse = array_replace_recursive(
+            [
+                "entities" => [],
+                "message" => __d(self::domain, "{0} were not created", "tags")
+            ],
+            $tagsResponse);
 
         return [
             "events" => $eventResponse,
@@ -322,7 +328,7 @@ class EventServicesComponent extends Component
     /**
      * @return array of Resellers
      */
-    public function GetResellers()
+    public function GetAllResellers()
     {
         $query = $this->Users->find()
             ->where([
