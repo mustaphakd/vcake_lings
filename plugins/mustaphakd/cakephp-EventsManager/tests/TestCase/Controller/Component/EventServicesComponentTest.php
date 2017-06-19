@@ -191,8 +191,6 @@ class EventServicesComponentTest extends TestCase
         $this->assertTrue($eventCalled, "Event Created event should have been called");
         // assert resellers notified
         $this->assertCount(2, $this->EventsResellers->find()->toArray());
-
-        return $insertionResult;
     }
 
     public function test_insert_invalid_simple_event_fail(){
@@ -226,7 +224,7 @@ class EventServicesComponentTest extends TestCase
      *
      * @param $insertionResult
      */
-    public function test_update_event_minCost_increased_succeed($insertionResult){
+    public function test_update_event_minCost_increased_succeed(){
 
         $this->provisionResellers();
         $eventRaised = false;
@@ -237,27 +235,30 @@ class EventServicesComponentTest extends TestCase
                 $eventRaised = true;
             });
 
+        $insertionResult = $this->component->insert_events([self::$ecowas_event]);
+
         $event =  $insertionResult["events"]["entities"][0];
         $event->sub_header = "Breaking news!";
         $event->min_cost = 470;
 
+        $eventArr = $event->toArray();
         //only notify reseller  min cost if more than default_cost || new min cost is more than reseller min_cost
+        $this->component->update_event($eventArr);
 
-        $updateResult = $this->component->update_event($event);
+        $event = $this->Events->get(
+            $event->id,
+            [
+                "contain" => ["Resellers"]
+            ]);
 
-        debug($updateResult);
-
-        $resellersAttempt = $event->Resellers->find()->toArray();
-
-        debug($resellersAttempt);
-
+        $resellersAttempt = $event->resellers;
         $eventResellers = $this->EventsResellers->find()->toArray();
 
-        $this->assertCount(2, $eventResellers);
+        $this->assertCount(2, $resellersAttempt);
 
         $updated = true;
         foreach ($eventResellers as $reseller){
-            if($reseller->cost !== $event->min_cost){
+            if( ($reseller->event_id == $event->id ) && ($reseller->cost !== $event->min_cost)){
                 $updated = false;
                 break;
             }
@@ -274,25 +275,25 @@ class EventServicesComponentTest extends TestCase
      *
      * @param $insertionResult
      */
-    public function test_update_event_defaultCost_decreased_moreThan_prevMinCost_succeed($insertionResult){
+    public function test_update_event_defaultCost_decreased_moreThan_prevMinCost_succeed(){
 
         $this->provisionResellers();
+
+        $insertionResult = $this->component->insert_events([self::$ecowas_event]);
         $event = $insertionResult["events"]["entities"][0];
+
         $event->sub_header = "Breaking news!";
         $event->min_cost = 400.51;
         $event->default_cost = 445;
         //only notify reseller  min cost if more than default_cost || new min cost is more than reseller min_cost
+        $this->component->update_event($event->toArray());
+        $eventResellers = $this->EventsResellers->find()->where(["event_id" => $event->id])->toArray();
 
-        $updateResult = $this->component->update_event($event);
-
-        debug($updateResult);
-
-        $eventResellers = $this->EventsResellers->find()->toArray();
-        $this->assertCount(2, $eventResellers);
+        $this->assertCount(2, $eventResellers, "more than 2 entries found");
         $updated = true;
 
         foreach ($eventResellers as $reseller){
-            if($reseller->cost !== $event->min_cost){
+            if($reseller->cost < $event->min_cost || $reseller->cost > $event->default_cost){
                 $updated = false;
                 break;
             }
@@ -353,6 +354,9 @@ class EventServicesComponentTest extends TestCase
         $this->Events->saveMany($arr, ["associated" => false]);
     }
 
+    ///
+    /// creates "reseller" role, add two new users and
+    /// adds an eventReseller with just one reseller for a first found event
     private function provisionResellers(){
 
         $resellerRole = $this->Roles->newEntity([ "name" => EventServicesComponent::ROLE_RESELLER]);
@@ -398,7 +402,7 @@ class EventServicesComponentTest extends TestCase
             ]);
 
         $topEvent = $this->Events->find()->firstOrFail();
-        $resellers = $this->component->getResellers();
+        $resellers = $this->component->GetAllResellers();
 
         $eventResellerFixture = new EventsResellersFixture();
         $this->createOrTruncateTable($this->EventsResellers->getTable(), $eventResellerFixture);
@@ -412,7 +416,7 @@ class EventServicesComponentTest extends TestCase
         $eventResellerFixture->init();
         $eventResellerFixture->insert(ConnectionManager::get("test"));
 
-        $resellers = $this->component->getResellers();
+        $resellers = $this->component->GetAllResellers();
     }
 
     private function preLoadFixtures(array $fixtures, $callable){

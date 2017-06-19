@@ -6,17 +6,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7769853a-614e-4dca-9e0f-87dec91f8b74" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/tests/Fixture/EventResellerFixture.php" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/tests/Fixture/EventsResellersFixture.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Controller/Component/EventServicesComponent.php" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Controller/Component/EventServicesComponent.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/EventsResellersTable.php" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/EventsResellersTable.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/EventsTable.php" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/EventsTable.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/tests/TestCase/Controller/Component/EventServicesComponentTest.php" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/tests/TestCase/Controller/Component/EventServicesComponentTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Model/Table/RolesTable.php" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Model/Table/RolesTable.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Model/Table/RolesUsersTable.php" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Model/Table/RolesUsersTable.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Model/Table/UsersTable.php" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Model/Table/UsersTable.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/Fixture/RolesUsersFixture.php" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/Fixture/RolesUsersFixture.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/Fixture/UsersFixture.php" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/Fixture/UsersFixture.php" />
     </list>
     <ignored path="vhealings.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,25 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EventsTable.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/EventsTable.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="85" column="48" lean-forward="true" selection-start-line="85" selection-start-column="48" selection-end-line="85" selection-end-column="48" />
-              <folding>
-                <element signature="e#118#140#0#PHP" expanded="true" />
-                <element signature="e#430#1834#0#PHP" expanded="false" />
-                <element signature="e#3655#3991#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventServicesComponentTest.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EventServicesComponentTest.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/tests/TestCase/Controller/Component/EventServicesComponentTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="292" column="0" lean-forward="false" selection-start-line="292" selection-start-column="0" selection-end-line="292" selection-end-column="0" />
+            <state relative-caret-position="187">
+              <caret line="314" column="52" lean-forward="true" selection-start-line="314" selection-start-column="52" selection-end-line="314" selection-end-column="52" />
               <folding>
                 <element signature="e#141#163#0#PHP" expanded="true" />
                 <element signature="e#766#821#0#PHP" expanded="false" />
@@ -78,35 +56,42 @@
                 <element signature="e#3337#3522#0#PHP" expanded="false" />
                 <element signature="e#3589#3784#0#PHP" expanded="false" />
                 <element signature="e#3790#4107#0#PHP" expanded="false" />
-                <element signature="e#4113#5015#0#PHP" expanded="false" />
-                <element signature="e#5021#5932#0#PHP" expanded="false" />
-                <element signature="e#5155#5338#0#PHP" expanded="false" />
-                <element signature="e#6048#7338#0#PHP" expanded="false" />
-                <element signature="e#8745#9203#0#PHP" expanded="false" />
-                <element signature="e#9210#10014#0#PHP" expanded="false" />
-                <element signature="e#10308#11303#1#PHP" expanded="false" />
-                <element signature="e#12083#12560#0#PHP" expanded="false" />
-                <element signature="e#12566#13129#0#PHP" expanded="false" />
-                <element signature="e#13135#13538#0#PHP" expanded="false" />
-                <element signature="e#13544#13904#0#PHP" expanded="false" />
-                <element signature="e#13910#14177#0#PHP" expanded="false" />
+                <element signature="e#4113#4981#0#PHP" expanded="false" />
+                <element signature="e#4987#5898#0#PHP" expanded="false" />
+                <element signature="e#5121#5304#0#PHP" expanded="false" />
+                <element signature="e#5904#6009#0#PHP" expanded="false" />
+                <element signature="e#6014#7491#0#PHP" expanded="false" />
+                <element signature="e#7607#8672#0#PHP" expanded="false" />
+                <element signature="e#9034#9492#0#PHP" expanded="false" />
+                <element signature="e#9499#10303#0#PHP" expanded="false" />
+                <element signature="e#10449#12512#0#PHP" expanded="false" />
+                <element signature="e#10737#11732#1#PHP" expanded="false" />
+                <element signature="e#12518#12995#0#PHP" expanded="false" />
+                <element signature="e#13001#13564#0#PHP" expanded="false" />
+                <element signature="e#13570#13973#0#PHP" expanded="false" />
+                <element signature="e#13979#14339#0#PHP" expanded="false" />
+                <element signature="e#14345#14612#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventServicesComponent.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EventServicesComponent.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Controller/Component/EventServicesComponent.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="204" column="0" lean-forward="true" selection-start-line="204" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
+            <state relative-caret-position="148">
+              <caret line="248" column="10" lean-forward="false" selection-start-line="248" selection-start-column="10" selection-end-line="248" selection-end-column="10" />
               <folding>
                 <element signature="e#127#157#0#PHP" expanded="true" />
                 <element signature="e#1009#1939#0#PHP" expanded="false" />
                 <element signature="e#2476#2575#0#PHP" expanded="false" />
-                <element signature="e#6511#6630#0#PHP" expanded="false" />
-                <element signature="e#7235#7568#0#PHP" expanded="false" />
-                <element signature="e#7574#8489#0#PHP" expanded="false" />
+                <element signature="e#6612#6945#0#PHP" expanded="false" />
+                <element signature="e#6798#6912#0#PHP" expanded="false" />
+                <element signature="e#6951#7236#0#PHP" expanded="false" />
+                <element signature="e#7242#7575#0#PHP" expanded="false" />
+                <element signature="e#7581#8755#0#PHP" expanded="false" />
+                <element signature="e#8761#8806#0#PHP" expanded="false" />
+                <element signature="e#8811#9237#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -115,7 +100,7 @@
       <file leaf-file-name="WrsftAuthComponentTest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/TestCase/Controller/Component/WrsftAuthComponentTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2363">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -125,12 +110,37 @@
       <file leaf-file-name="EventsResellersTable.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/EventsResellersTable.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-105">
-              <caret line="40" column="27" lean-forward="false" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
+            <state relative-caret-position="262">
+              <caret line="145" column="30" lean-forward="false" selection-start-line="145" selection-start-column="30" selection-end-line="145" selection-end-column="30" />
               <folding>
-                <element signature="e#117#136#0#PHP" expanded="true" />
-                <element signature="e#1926#3386#0#PHP" expanded="false" />
-                <element signature="e#3392#3769#0#PHP" expanded="false" />
+                <element signature="e#117#138#0#PHP" expanded="true" />
+                <element signature="e#434#1341#0#PHP" expanded="false" />
+                <element signature="e#1348#1986#0#PHP" expanded="false" />
+                <element signature="e#1992#3452#0#PHP" expanded="false" />
+                <element signature="e#3458#3835#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UsersTable.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Model/Table/UsersTable.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="200" column="79" lean-forward="false" selection-start-line="200" selection-start-column="11" selection-end-line="200" selection-end-column="79" />
+              <folding>
+                <element signature="e#410#926#0#PHP" expanded="false" />
+                <element signature="e#932#5723#0#PHP" expanded="false" />
+                <element signature="e#1029#1573#0#PHP" expanded="false" />
+                <element signature="e#1029#1727#0#PHP" expanded="false" />
+                <element signature="e#1029#2184#0#PHP" expanded="false" />
+                <element signature="e#1029#2707#0#PHP" expanded="false" />
+                <element signature="e#1029#3226#0#PHP" expanded="false" />
+                <element signature="e#1029#4826#0#PHP" expanded="false" />
+                <element signature="e#1029#5680#0#PHP" expanded="false" />
+                <element signature="e#5729#6010#0#PHP" expanded="false" />
+                <element signature="e#6141#6249#0#PHP" expanded="false" />
+                <element signature="e#6354#6460#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -207,13 +217,13 @@
         <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Model/Table/RolesTable.php" />
         <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/EventsTable.php" />
         <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Model/Table/UsersTable.php" />
-        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/EventsResellersTable.php" />
         <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/tests/Fixture/EventResellerFixture.php" />
         <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/Fixture/RolesUsersFixture.php" />
         <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/tests/Fixture/EventsResellersFixture.php" />
         <option value="$PROJECT_DIR$/vendor/cakephp/cakephp/src/TestSuite/Fixture/TestFixture.php" />
-        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/tests/TestCase/Controller/Component/EventServicesComponentTest.php" />
         <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Controller/Component/EventServicesComponent.php" />
+        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/EventsResellersTable.php" />
+        <option value="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/tests/TestCase/Controller/Component/EventServicesComponentTest.php" />
       </list>
     </option>
   </component>
@@ -777,6 +787,10 @@
               <option name="myItemId" value="Model" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entity" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -828,8 +842,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -967,11 +981,12 @@
       <workItem from="1496763379592" duration="1430000" />
       <workItem from="1496767889347" duration="4635000" />
       <workItem from="1496794329289" duration="67438000" />
+      <workItem from="1497839784509" duration="8576000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="563610000" />
+    <option name="totallyTimeSpent" value="572186000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -984,8 +999,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16762178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16977078" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1083,32 +1099,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/tests/TestCase/Model/Table/EventsTableTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-          <folding>
-            <element signature="e#131#155#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Core/Core.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="399" column="9" lean-forward="false" selection-start-line="399" selection-start-column="9" selection-end-line="399" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/TestCase/Controller/AccountsControllerTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-366">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/cakephp/debug_kit/src/Model/Table/PanelsTable.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
@@ -1129,7 +1119,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="18" column="6" lean-forward="false" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1137,7 +1126,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="51" column="25" lean-forward="true" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1153,7 +1141,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5661">
           <caret line="352" column="27" lean-forward="false" selection-start-line="352" selection-start-column="27" selection-end-line="352" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1161,7 +1148,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1169,7 +1155,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
           <caret line="51" column="26" lean-forward="false" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1177,7 +1162,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="3" lean-forward="true" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1185,31 +1169,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="185" column="34" lean-forward="false" selection-start-line="185" selection-start-column="34" selection-end-line="185" selection-end-column="34" />
-          <folding>
-            <marker date="1493378172594" expanded="true" signature="34423:39099" ph="..." />
-            <marker date="1493378172594" expanded="true" signature="34475:39099" ph="..." />
-            <marker date="1493378172594" expanded="true" signature="34555:39099" ph="..." />
-            <marker date="1493378172594" expanded="true" signature="34632:39099" ph="..." />
-            <marker date="1493378172594" expanded="true" signature="34706:39099" ph="..." />
-            <marker date="1493378172594" expanded="true" signature="34775:39099" ph="..." />
-            <marker date="1493378172594" expanded="true" signature="34901:39099" ph="..." />
-            <marker date="1493378172594" expanded="true" signature="34979:39099" ph="..." />
-            <marker date="1493378172594" expanded="true" signature="35003:39099" ph="..." />
-            <marker date="1493378172594" expanded="true" signature="35147:39099" ph="..." />
-            <marker date="1493378172594" expanded="true" signature="35226:39099" ph="..." />
-            <marker date="1493378172594" expanded="true" signature="35301:39099" ph="..." />
-            <marker date="1493378172594" expanded="true" signature="35379:39099" ph="..." />
-            <marker date="1493378172594" expanded="true" signature="35456:39099" ph="..." />
-            <marker date="1493378172594" expanded="true" signature="35616:39099" ph="..." />
-            <marker date="1493378172594" expanded="true" signature="35671:39099" ph="..." />
-            <marker date="1493378172594" expanded="true" signature="36862:39099" ph="..." />
-            <marker date="1493378172594" expanded="true" signature="36940:39099" ph="..." />
-            <marker date="1493378172594" expanded="true" signature="37830:39099" ph="..." />
-            <marker date="1493378172594" expanded="true" signature="37896:39099" ph="..." />
-            <marker date="1493378172594" expanded="true" signature="38260:39099" ph="..." />
-            <marker date="1493378172594" expanded="true" signature="38348:39099" ph="..." />
-            <marker date="1493378172594" expanded="true" signature="38436:39099" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1217,7 +1176,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="22" column="20" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1225,7 +1183,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="729" column="34" lean-forward="false" selection-start-line="729" selection-start-column="34" selection-end-line="729" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1233,7 +1190,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="324" column="30" lean-forward="false" selection-start-line="324" selection-start-column="30" selection-end-line="324" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1241,17 +1197,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="437" column="36" lean-forward="false" selection-start-line="437" selection-start-column="36" selection-end-line="437" selection-end-column="36" />
-          <folding>
-            <element signature="e#5215#5534#0#PHP" expanded="false" />
-            <element signature="e#6715#7823#0#PHP" expanded="false" />
-            <element signature="e#7833#9713#0#PHP" expanded="false" />
-            <element signature="e#9883#10219#0#PHP" expanded="false" />
-            <element signature="e#10229#10565#0#PHP" expanded="false" />
-            <element signature="e#10575#10803#0#PHP" expanded="false" />
-            <element signature="e#10848#10936#0#PHP" expanded="false" />
-            <element signature="e#14757#15016#0#PHP" expanded="false" />
-            <element signature="e#16904#21442#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1259,7 +1204,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="52" column="15" lean-forward="false" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1326,7 +1270,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="101" lean-forward="false" selection-start-line="11" selection-start-column="101" selection-end-line="11" selection-end-column="101" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1391,18 +1334,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/EventsTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="85" column="48" lean-forward="true" selection-start-line="85" selection-start-column="48" selection-end-line="85" selection-end-column="48" />
-          <folding>
-            <element signature="e#118#140#0#PHP" expanded="true" />
-            <element signature="e#430#1834#0#PHP" expanded="false" />
-            <element signature="e#3655#3991#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/Event/EventManager.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
@@ -1416,28 +1347,6 @@
         <state relative-caret-position="17">
           <caret line="40" column="45" lean-forward="false" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Model/Table/UsersTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="23" column="45" lean-forward="false" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
-          <folding>
-            <element signature="e#410#926#0#PHP" expanded="false" />
-            <element signature="e#932#5723#0#PHP" expanded="false" />
-            <element signature="e#1029#1573#0#PHP" expanded="false" />
-            <element signature="e#1029#1727#0#PHP" expanded="false" />
-            <element signature="e#1029#2184#0#PHP" expanded="false" />
-            <element signature="e#1029#2707#0#PHP" expanded="false" />
-            <element signature="e#1029#3226#0#PHP" expanded="false" />
-            <element signature="e#1029#4826#0#PHP" expanded="false" />
-            <element signature="e#1029#5680#0#PHP" expanded="false" />
-            <element signature="e#5729#6010#0#PHP" expanded="false" />
-            <element signature="e#6141#6249#0#PHP" expanded="false" />
-            <element signature="e#6354#6460#0#PHP" expanded="false" />
-            <element signature="e#6466#6931#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1461,7 +1370,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
           <caret line="78" column="20" lean-forward="false" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1517,15 +1425,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-195">
           <caret line="204" column="27" lean-forward="false" selection-start-line="204" selection-start-column="27" selection-end-line="204" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/TestCase/Controller/Component/WrsftAuthComponentTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2363">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1533,14 +1432,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="840" column="9" lean-forward="false" selection-start-line="840" selection-start-column="9" selection-end-line="840" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/tests/Fixture/EventsResellersFixture.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="33" column="11" lean-forward="false" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -1559,33 +1450,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="266" column="5" lean-forward="true" selection-start-line="266" selection-start-column="5" selection-end-line="266" selection-end-column="5" />
-          <folding>
-            <element signature="e#1445#1547#0#PHP" expanded="false" />
-            <element signature="e#1588#1684#0#PHP" expanded="false" />
-            <element signature="e#1722#1868#0#PHP" expanded="false" />
-            <element signature="e#1905#2045#0#PHP" expanded="false" />
-            <element signature="e#2050#2126#0#PHP" expanded="false" />
-            <element signature="e#2132#2311#0#PHP" expanded="false" />
-            <element signature="e#2728#2799#0#PHP" expanded="false" />
-            <element signature="e#2804#2871#0#PHP" expanded="false" />
-            <element signature="e#2877#3079#0#PHP" expanded="false" />
-            <element signature="e#3084#3852#0#PHP" expanded="false" />
-            <element signature="e#3858#3986#0#PHP" expanded="false" />
-            <element signature="e#3991#4168#0#PHP" expanded="false" />
-            <element signature="e#4174#4449#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/EventsResellersTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-105">
-          <caret line="40" column="27" lean-forward="false" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
-          <folding>
-            <element signature="e#117#136#0#PHP" expanded="true" />
-            <element signature="e#1926#3386#0#PHP" expanded="false" />
-            <element signature="e#3392#3769#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1597,18 +1461,126 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Entity/EventEntity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="32" column="30" lean-forward="false" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/ORM/Entity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/Datasource/EntityTrait.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="527" column="20" lean-forward="false" selection-start-line="527" selection-start-column="20" selection-end-line="527" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/tests/TestCase/Controller/Component/WrsftAuthComponentTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/ORM/Table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="2491" column="32" lean-forward="false" selection-start-line="2491" selection-start-column="32" selection-end-line="2491" selection-end-column="32" />
+        <state relative-caret-position="226">
+          <caret line="1390" column="20" lean-forward="false" selection-start-line="1390" selection-start-column="20" selection-end-line="1390" selection-end-column="20" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/tests/Fixture/EventsResellersFixture.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="33" column="11" lean-forward="false" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/EventsTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="55" column="45" lean-forward="false" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
+          <folding>
+            <element signature="e#118#140#0#PHP" expanded="true" />
+            <element signature="e#430#1834#0#PHP" expanded="false" />
+            <element signature="e#2012#3649#0#PHP" expanded="false" />
+            <element signature="e#3655#3991#0#PHP" expanded="false" />
+            <element signature="e#3997#6887#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-UsersManager/src/Model/Table/UsersTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="200" column="79" lean-forward="false" selection-start-line="200" selection-start-column="11" selection-end-line="200" selection-end-column="79" />
+          <folding>
+            <element signature="e#410#926#0#PHP" expanded="false" />
+            <element signature="e#932#5723#0#PHP" expanded="false" />
+            <element signature="e#1029#1573#0#PHP" expanded="false" />
+            <element signature="e#1029#1727#0#PHP" expanded="false" />
+            <element signature="e#1029#2184#0#PHP" expanded="false" />
+            <element signature="e#1029#2707#0#PHP" expanded="false" />
+            <element signature="e#1029#3226#0#PHP" expanded="false" />
+            <element signature="e#1029#4826#0#PHP" expanded="false" />
+            <element signature="e#1029#5680#0#PHP" expanded="false" />
+            <element signature="e#5729#6010#0#PHP" expanded="false" />
+            <element signature="e#6141#6249#0#PHP" expanded="false" />
+            <element signature="e#6354#6460#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/EventsResellersTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="145" column="30" lean-forward="false" selection-start-line="145" selection-start-column="30" selection-end-line="145" selection-end-column="30" />
+          <folding>
+            <element signature="e#117#138#0#PHP" expanded="true" />
+            <element signature="e#434#1341#0#PHP" expanded="false" />
+            <element signature="e#1348#1986#0#PHP" expanded="false" />
+            <element signature="e#1992#3452#0#PHP" expanded="false" />
+            <element signature="e#3458#3835#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Controller/Component/EventServicesComponent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="248" column="10" lean-forward="false" selection-start-line="248" selection-start-column="10" selection-end-line="248" selection-end-column="10" />
+          <folding>
+            <element signature="e#127#157#0#PHP" expanded="true" />
+            <element signature="e#1009#1939#0#PHP" expanded="false" />
+            <element signature="e#2476#2575#0#PHP" expanded="false" />
+            <element signature="e#6612#6945#0#PHP" expanded="false" />
+            <element signature="e#6798#6912#0#PHP" expanded="false" />
+            <element signature="e#6951#7236#0#PHP" expanded="false" />
+            <element signature="e#7242#7575#0#PHP" expanded="false" />
+            <element signature="e#7581#8755#0#PHP" expanded="false" />
+            <element signature="e#8761#8806#0#PHP" expanded="false" />
+            <element signature="e#8811#9237#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/tests/TestCase/Controller/Component/EventServicesComponentTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="292" column="0" lean-forward="false" selection-start-line="292" selection-start-column="0" selection-end-line="292" selection-end-column="0" />
+        <state relative-caret-position="187">
+          <caret line="314" column="52" lean-forward="true" selection-start-line="314" selection-start-column="52" selection-end-line="314" selection-end-column="52" />
           <folding>
             <element signature="e#141#163#0#PHP" expanded="true" />
             <element signature="e#766#821#0#PHP" expanded="false" />
@@ -1626,33 +1598,21 @@
             <element signature="e#3337#3522#0#PHP" expanded="false" />
             <element signature="e#3589#3784#0#PHP" expanded="false" />
             <element signature="e#3790#4107#0#PHP" expanded="false" />
-            <element signature="e#4113#5015#0#PHP" expanded="false" />
-            <element signature="e#5021#5932#0#PHP" expanded="false" />
-            <element signature="e#5155#5338#0#PHP" expanded="false" />
-            <element signature="e#6048#7338#0#PHP" expanded="false" />
-            <element signature="e#8745#9203#0#PHP" expanded="false" />
-            <element signature="e#9210#10014#0#PHP" expanded="false" />
-            <element signature="e#10308#11303#1#PHP" expanded="false" />
-            <element signature="e#12083#12560#0#PHP" expanded="false" />
-            <element signature="e#12566#13129#0#PHP" expanded="false" />
-            <element signature="e#13135#13538#0#PHP" expanded="false" />
-            <element signature="e#13544#13904#0#PHP" expanded="false" />
-            <element signature="e#13910#14177#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Controller/Component/EventServicesComponent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="204" column="0" lean-forward="true" selection-start-line="204" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
-          <folding>
-            <element signature="e#127#157#0#PHP" expanded="true" />
-            <element signature="e#1009#1939#0#PHP" expanded="false" />
-            <element signature="e#2476#2575#0#PHP" expanded="false" />
-            <element signature="e#6511#6630#0#PHP" expanded="false" />
-            <element signature="e#7235#7568#0#PHP" expanded="false" />
-            <element signature="e#7574#8489#0#PHP" expanded="false" />
+            <element signature="e#4113#4981#0#PHP" expanded="false" />
+            <element signature="e#4987#5898#0#PHP" expanded="false" />
+            <element signature="e#5121#5304#0#PHP" expanded="false" />
+            <element signature="e#5904#6009#0#PHP" expanded="false" />
+            <element signature="e#6014#7491#0#PHP" expanded="false" />
+            <element signature="e#7607#8672#0#PHP" expanded="false" />
+            <element signature="e#9034#9492#0#PHP" expanded="false" />
+            <element signature="e#9499#10303#0#PHP" expanded="false" />
+            <element signature="e#10449#12512#0#PHP" expanded="false" />
+            <element signature="e#10737#11732#1#PHP" expanded="false" />
+            <element signature="e#12518#12995#0#PHP" expanded="false" />
+            <element signature="e#13001#13564#0#PHP" expanded="false" />
+            <element signature="e#13570#13973#0#PHP" expanded="false" />
+            <element signature="e#13979#14339#0#PHP" expanded="false" />
+            <element signature="e#14345#14612#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

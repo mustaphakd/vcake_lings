@@ -8,9 +8,11 @@
 
 namespace Wrsft\Model\Table;
 
+use Cake\Event\Event;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
 use Wrsft\Model\Entity\EventEntity;
+use Wrsft\Model\Entity\EventResellerEntity;
 use Wrsft\Model\Entity\UserEntity;
 
 
@@ -135,6 +137,13 @@ class EventsResellersTable extends Table
             ->decimal("cost");
 
         return $validator;
+    }
+
+    public function beforeSave(Event $event, EventResellerEntity $entity){
+        if($entity->isNew()){
+            $entity->set("created", (new \DateTimeImmutable())->format("ymd"));
+        }
+        $entity->set("modified", (new \DateTimeImmutable())->format("ymd"));
     }
 
 }
