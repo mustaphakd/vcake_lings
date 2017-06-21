@@ -20,7 +20,18 @@ class TimeLinesTable extends Table
         "start" => ["type" => "time", "null" => false],
         "end" => ["type" => "time", "null" => false],
         "synopsys" => ["type" => "text", "length" => "tiny"],
-        "image" => ["type" => "string", "fixed" => false, "length" => 100]
+        "image" => ["type" => "string", "fixed" => false, "length" => 100],
+        "_constraints" =>
+        [
+            "prim" => [
+                "type" => "primary",
+                "columns" => ["id"]
+            ],
+            "unique_flds" => [
+                "type" => TableSchema::CONSTRAINT_UNIQUE,
+                "columns" => ["start", "end"]
+            ]
+        ]
     ];
 
     private static $domain = 'Wrsft\TimeLines';
@@ -37,7 +48,7 @@ class TimeLinesTable extends Table
             "Events",
             [
                 "className" => "\Wrsft\Model\Table\EventsTable",
-                "through" => '\Wrsft\Model\Table\EventsTimeLinesTable',
+                "through" =>  new EventsTimeLinesTable(),
                 "foreignKey" => "time_line_id",
                 "targetForeignKey" => "event_id",
                 "cascade" => false
@@ -53,6 +64,7 @@ class TimeLinesTable extends Table
                 true,
                 __d(self::$domain, '{0} presence required', "start and end time, synopsys")
             )
+            ->uuid("id")
             ->time("start", __d(self::$domain, "time format required for {0}", "start"))
             ->time("end", __d(self::$domain, "time format required for {0}", "end"))
             ->lengthBetween("synopsys", [1, TableSchema::LENGTH_TINY])

@@ -17,12 +17,14 @@ use Cake\Event\Event;
 use Cake\Event\EventManager;
 use Cake\Http\ServerRequest;
 use Cake\Http\Response;
+use Cake\I18n\Time;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\Fixture\TestFixture;
 use Cake\TestSuite\TestCase;
 use Cake\Utility\Text;
 use Wrsft\Controller\Component\EventServicesComponent;
 use Wrsft\Test\Fixture\EventsResellersFixture;
+use Wrsft\Test\Fixture\EventTimeLineFixture;
 
 class EventServicesComponentTest extends TestCase
 {
@@ -56,6 +58,16 @@ class EventServicesComponentTest extends TestCase
      * @var \Wrsft\Model\Table\EventsResellersTable $EventsResellers;
      */
     public $EventsResellers;
+
+    /**
+     * @var \Wrsft\Model\Table\TimeLinesTable $TimeLines;
+     */
+    public $TimeLines;
+
+    /**
+     * @var \Wrsft\Model\Table\EventsTimeLinesTable $EventsTimeLines;
+     */
+    public $EventsTimeLines;
 
     public $fixtures = []; //'plugin.Wrsft.Events', 'plugin.Wrsft.Users', 'plugin.Wrsft.Roles'];
     public $autoFixtures = false;
@@ -141,6 +153,12 @@ class EventServicesComponentTest extends TestCase
         $this->dropTable(
             $this->EventsResellers->getTable(),
             new EventsResellersFixture());
+
+        if( $this->EventsTimeLines !== null) {
+            $this->dropTable(
+                $this->EventsTimeLines->getTable(),
+                new EventTimeLineFixture());
+        }
 
         parent::tearDown();
     }
@@ -351,18 +369,129 @@ class EventServicesComponentTest extends TestCase
 
     public function test_create_simple_timeLine_succeed(){
 
+        $this->provisionTimeLines();
+        $data = [
+            ["start" => "08:30 ", "end" => "09:15", "synopsys" => "brief description blah", "image" => 'ffadf\fadfa\fasdfa.png'],
+            ["start" => "08:30 ", "end" => "09:30", "synopsys" => "brief description blah", "image" => 'ffadf\fadfa\fasdfa.png']
+        ];
+
+        $newEntities = $this->TimeLines->newEntities($data);
+
+        $hasErrors = false;
+
+        foreach ($newEntities as $newEntity){
+            if($newEntity->getErrors()){
+                $hasErrors = true;
+                break;
+            }
+        }
+
+        $this->assertFalse($hasErrors, "data has errors! || constrains/Sql issues");
+
+        $this->TimeLines->save($newEntities);
+
+        $foundEntities = $this->TimeLines->find()->toArray();
+
+        $this->assertCount(7, $foundEntities);
     }
 
     public function test_update_simple_timeLine_succeed(){
 
+        $this->provisionTimeLines();
+        $timeLine = $this->TimeLines->find()->firstOrFail();
+
+        $this->assertNotNull($timeLine, "TimelineFixture not created");
+
+
+        debug($timeLine->start);
+
+        $editTime = Time::parseTime($timeLine->start);
+
+        $editTime->addHours(2);
+        $editTime->addMinute();
+        $editTime = $editTime->format("H:mm:ss");
+
+        debug($editTime);
+
+        $update = $this->TimeLines->patchEntity($timeLine, ["start" => $editTime]);
+
+        $this->assertFalse($update->getErrors(), "Errors should not have been present");
+
+        $this->TimeLines->save($update);
+
+        $foundEntity = $this->TimeLines->get($timeLine->id);
+
+        $foundEntityTime = Time::parseTime($foundEntity->start);
+        $foundEntityFormattedTime = $foundEntityTime->format("H:mm:ss");
+
+        $this->assertEquals($editTime, $foundEntityFormattedTime, "Formatted time do not match");
+    }
+
+    public function test_update_simple_timeLine_startGtEnd_fails(){
+
+        $this->provisionTimeLines();
+        $timeLine = $this->TimeLines->find()->firstOrFail();
+
+        $this->assertNotNull($timeLine, "TimelineFixture not created");
+
+
+        debug($timeLine->start);
+        debug($timeLine->end);
+
+        $editStartTime = Time::parseTime($timeLine->start);
+        $editEndTime = Time::parseTime($timeLine->end);
+
+        $tempFormattedTimeStart = $editStartTime->format("H:mm:ss");
+        $editStartTime = $editEndTime->format("H:mm:ss");
+        $editEndTime = $tempFormattedTimeStart;
+
+        $newPatchedEntity = $this->TimeLines->patchEntity(
+            $timeLine,
+            [
+                "start" => $editStartTime,
+                "end" => $editEndTime
+            ]);
+
+        $this->assertNotFalse($newPatchedEntity->getErrors(), "GetErrors returned false");
     }
 
     public function test_delete_unused_timeLine_succeed(){
+
+        $this->provisionTimeLines();
+        $timeLine = $this->TimeLines->find()->firstOrFail();
+
+        $this->assertNotNull($timeLine, "TimelineFixture not created");
+
+        $this->component->deleteTimeLine($timeLine->id);
+
+        $foundTimeLine = $this->TimeLines->get($timeLine->id);
+
+        $this->assertNull($foundTimeLine, "TimeLine should have been deleted");
 
     }
 
     public function test_delete_used_timeLine_fail(){
 
+        $this->provisionTimeLines();
+        $timeLine = $this->TimeLines->find()->firstOrFail();
+
+        $event = $this->Events->find()->firstOrFail();
+
+        $this->assertNotNull($timeLine, "TimelineFixture not created");
+        $this->assertNotNull($event, "EventsFixture not created");
+
+        $newEntity = $this->EventsTimeLines->newEntity([
+            "event_id" => $event->id,
+            "time_line_id" => $timeLine->id
+        ]);
+
+        $this->EventsTimeLines->save($newEntity);
+
+        $this->assertCount(1, $this->EventsTimeLines->find()->toArray());
+
+        $success = $this->TimeLines->delete($this->TimeLines->get($timeLine->id));
+
+        $this->assertFalse($success, "TimeLine should not have been deleted");
     }
 
     public function test_create_event_with_new_timeLine_succeed(){
@@ -572,6 +701,40 @@ class EventServicesComponentTest extends TestCase
         $tables = $connectionInterface->schemaCollection()->listTables();
         $tableFound = in_array($tableName, $tables);
         return $tableFound;
+    }
+
+    private function provisionTimeLines(){
+        $handle = $this;
+        $this->preLoadFixtures(
+            [
+                'plugin.Wrsft.Events',
+                'plugin.Wrsft.Users',
+                'plugin.Wrsft.Roles',
+                'plugin.Wrsft.Roles',
+                'plugin.Wrsft.RolesUsers',
+                'plugin.Wrsft.TimeLine'
+            ],
+
+            function() use($handle){
+                $handle->loadFixtures('Events', 'Users', 'Roles', 'RolesUsers', 'TimeLine');
+            }
+        );
+
+        $this->TimeLines = TableRegistry::get(
+            "TimeLines",
+            [
+                "className" => '\Wrsft\Model\Table\TimeLinesTable'
+            ]
+        );
+        $this->EventsTimeLines = TableRegistry::get(
+            "EventsTimeLines",
+            [
+                "className" => '\Wrsft\Model\Table\EventsTimeLinesTable'
+            ]
+        );
+
+        $eventTimeLineFixture = new EventTimeLineFixture();
+        $this->createOrTruncateTable($this->EventsTimeLines->getTable(), $eventTimeLineFixture);
     }
 
 }
