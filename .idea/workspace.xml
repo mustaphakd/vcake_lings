@@ -6,8 +6,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7769853a-614e-4dca-9e0f-87dec91f8b74" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Entity/TimeLineEntity.php" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Entity/TimeLineEntity.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/TimeLinesTable.php" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/TimeLinesTable.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/tests/TestCase/Controller/Component/EventServicesComponentTest.php" afterPath="$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/tests/TestCase/Controller/Component/EventServicesComponentTest.php" />
     </list>
     <ignored path="vhealings.iws" />
@@ -37,8 +35,8 @@
       <file leaf-file-name="EventServicesComponentTest.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/tests/TestCase/Controller/Component/EventServicesComponentTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-210">
-              <caret line="479" column="55" lean-forward="true" selection-start-line="479" selection-start-column="55" selection-end-line="479" selection-end-column="55" />
+            <state relative-caret-position="346">
+              <caret line="541" column="7" lean-forward="false" selection-start-line="541" selection-start-column="7" selection-end-line="541" selection-end-column="7" />
               <folding>
                 <element signature="e#141#163#0#PHP" expanded="true" />
                 <element signature="e#831#886#0#PHP" expanded="false" />
@@ -71,49 +69,57 @@
                 <element signature="e#10562#11453#0#PHP" expanded="false" />
                 <element signature="e#11459#12441#0#PHP" expanded="false" />
                 <element signature="e#12447#13333#0#PHP" expanded="false" />
-                <element signature="e#15257#15715#0#PHP" expanded="false" />
-                <element signature="e#15722#16526#0#PHP" expanded="false" />
-                <element signature="e#16960#17955#1#PHP" expanded="false" />
-                <element signature="e#17967#18084#0#PHP" expanded="false" />
-                <element signature="e#18889#19366#0#PHP" expanded="false" />
-                <element signature="e#19372#19935#0#PHP" expanded="false" />
-                <element signature="e#19941#20344#0#PHP" expanded="false" />
-                <element signature="e#20350#20710#0#PHP" expanded="false" />
-                <element signature="e#20716#20983#0#PHP" expanded="false" />
-                <element signature="e#20989#22044#0#PHP" expanded="false" />
-                <element signature="e#21534#21683#0#PHP" expanded="false" />
-                <element signature="e#21718#21879#0#PHP" expanded="false" />
+                <element signature="e#13339#13775#0#PHP" expanded="false" />
+                <element signature="e#13781#14573#0#PHP" expanded="false" />
+                <element signature="e#14579#15919#0#PHP" expanded="false" />
+                <element signature="e#17608#18412#0#PHP" expanded="false" />
+                <element signature="e#18846#19841#1#PHP" expanded="false" />
+                <element signature="e#19853#19970#0#PHP" expanded="false" />
+                <element signature="e#20775#21252#0#PHP" expanded="false" />
+                <element signature="e#21258#21821#0#PHP" expanded="false" />
+                <element signature="e#21827#22230#0#PHP" expanded="false" />
+                <element signature="e#22236#22596#0#PHP" expanded="false" />
+                <element signature="e#22602#22869#0#PHP" expanded="false" />
+                <element signature="e#22875#23930#0#PHP" expanded="false" />
+                <element signature="e#23420#23569#0#PHP" expanded="false" />
+                <element signature="e#23604#23765#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/ORM/Table.php">
+      <file leaf-file-name="EventsTable.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/EventsTable.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
-              <caret line="2063" column="20" lean-forward="false" selection-start-line="2063" selection-start-column="20" selection-end-line="2063" selection-end-column="20" />
-              <folding />
+            <state relative-caret-position="-82">
+              <caret line="40" column="35" lean-forward="true" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+              <folding>
+                <element signature="e#2250#2433#0#PHP" expanded="false" />
+                <element signature="e#2444#2681#0#PHP" expanded="false" />
+                <element signature="e#2692#3025#0#PHP" expanded="false" />
+                <element signature="e#3655#3991#0#PHP" expanded="false" />
+                <element signature="e#3997#6887#0#PHP" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimeLineFixture.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/tests/Fixture/TimeLineFixture.php">
+      <file leaf-file-name="EventServicesComponent.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Controller/Component/EventServicesComponent.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="24" column="151" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="151" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TimeLinesTable.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/TimeLinesTable.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-307">
-              <caret line="31" column="43" lean-forward="false" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
-              <folding />
+            <state relative-caret-position="-224">
+              <caret line="289" column="21" lean-forward="false" selection-start-line="289" selection-start-column="21" selection-end-line="289" selection-end-column="21" />
+              <folding>
+                <element signature="e#127#157#0#PHP" expanded="true" />
+                <element signature="e#1009#1939#0#PHP" expanded="false" />
+                <element signature="e#2476#2575#0#PHP" expanded="false" />
+                <element signature="e#6612#6945#0#PHP" expanded="false" />
+                <element signature="e#6798#6912#0#PHP" expanded="false" />
+                <element signature="e#6951#7236#0#PHP" expanded="false" />
+                <element signature="e#7242#7575#0#PHP" expanded="false" />
+                <element signature="e#8761#8806#0#PHP" expanded="false" />
+                <element signature="e#8811#9237#0#PHP" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -131,40 +137,9 @@
       <file leaf-file-name="EventsTimeLinesTable.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/EventsTimeLinesTable.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="44" column="23" lean-forward="false" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
+            <state relative-caret-position="147">
+              <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="22" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TimeLineEntity.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Entity/TimeLineEntity.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventServicesComponent.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Controller/Component/EventServicesComponent.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="248" column="10" lean-forward="false" selection-start-line="248" selection-start-column="10" selection-end-line="248" selection-end-column="10" />
-              <folding>
-                <element signature="e#127#157#0#PHP" expanded="true" />
-                <element signature="e#1009#1939#0#PHP" expanded="false" />
-                <element signature="e#2476#2575#0#PHP" expanded="false" />
-                <element signature="e#6612#6945#0#PHP" expanded="false" />
-                <element signature="e#6798#6912#0#PHP" expanded="false" />
-                <element signature="e#6951#7236#0#PHP" expanded="false" />
-                <element signature="e#7242#7575#0#PHP" expanded="false" />
-                <element signature="e#7581#8755#0#PHP" expanded="false" />
-                <element signature="e#8761#8806#0#PHP" expanded="false" />
-                <element signature="e#8811#9237#0#PHP" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -1006,11 +981,12 @@
       <workItem from="1496794329289" duration="67438000" />
       <workItem from="1497839784509" duration="8668000" />
       <workItem from="1497891648979" duration="12041000" />
+      <workItem from="1498064871978" duration="1390000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="584319000" />
+    <option name="totallyTimeSpent" value="585709000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1024,7 +1000,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29154727" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29584527" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1182,58 +1158,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
           <caret line="971" column="20" lean-forward="false" selection-start-line="971" selection-start-column="20" selection-end-line="971" selection-end-column="20" />
-          <folding>
-            <element signature="e#2641#4283#0#PHP" expanded="false" />
-            <element signature="e#4695#4945#0#PHP" expanded="false" />
-            <element signature="e#11331#11927#0#PHP" expanded="false" />
-            <element signature="e#22472#23642#0#PHP" expanded="false" />
-            <element signature="e#24080#24330#0#PHP" expanded="false" />
-            <element signature="e#24777#25039#0#PHP" expanded="false" />
-            <element signature="e#25597#26055#0#PHP" expanded="false" />
-            <element signature="e#26672#26950#0#PHP" expanded="false" />
-            <element signature="e#26956#27473#0#PHP" expanded="false" />
-            <element signature="e#27478#27758#0#PHP" expanded="false" />
-            <element signature="e#27764#28305#0#PHP" expanded="false" />
-            <element signature="e#28310#28605#0#PHP" expanded="false" />
-            <element signature="e#28611#29122#0#PHP" expanded="false" />
-            <element signature="e#29127#29401#0#PHP" expanded="false" />
-            <element signature="e#29407#29939#0#PHP" expanded="false" />
-            <element signature="e#29944#30233#0#PHP" expanded="false" />
-            <element signature="e#30239#30748#0#PHP" expanded="false" />
-            <element signature="e#30753#31024#0#PHP" expanded="false" />
-            <element signature="e#31030#31550#0#PHP" expanded="false" />
-            <element signature="e#31555#31832#0#PHP" expanded="false" />
-            <element signature="e#32435#32713#0#PHP" expanded="false" />
-            <element signature="e#32642#32705#0#PHP" expanded="false" />
-            <element signature="e#32719#33280#0#PHP" expanded="false" />
-            <element signature="e#33285#33601#0#PHP" expanded="false" />
-            <element signature="e#34899#35180#0#PHP" expanded="false" />
-            <element signature="e#35628#35865#0#PHP" expanded="false" />
-            <element signature="e#35871#36427#0#PHP" expanded="false" />
-            <element signature="e#36432#36725#0#PHP" expanded="false" />
-            <element signature="e#36731#37167#0#PHP" expanded="false" />
-            <element signature="e#37937#38210#0#PHP" expanded="false" />
-            <element signature="e#38216#38717#0#PHP" expanded="false" />
-            <element signature="e#38722#38992#0#PHP" expanded="false" />
-            <element signature="e#38998#39491#0#PHP" expanded="false" />
-            <element signature="e#40167#40412#0#PHP" expanded="false" />
-            <element signature="e#40418#40847#0#PHP" expanded="false" />
-            <element signature="e#40852#41097#0#PHP" expanded="false" />
-            <element signature="e#41103#41599#0#PHP" expanded="false" />
-            <element signature="e#41604#41870#0#PHP" expanded="false" />
-            <element signature="e#42382#42663#0#PHP" expanded="false" />
-            <element signature="e#43169#43435#0#PHP" expanded="false" />
-            <element signature="e#43946#44227#0#PHP" expanded="false" />
-            <element signature="e#44680#44926#0#PHP" expanded="false" />
-            <element signature="e#45386#45659#0#PHP" expanded="false" />
-            <element signature="e#46425#46967#0#PHP" expanded="false" />
-            <element signature="e#46972#47405#0#PHP" expanded="false" />
-            <element signature="e#47411#47909#0#PHP" expanded="false" />
-            <element signature="e#47914#48157#0#PHP" expanded="false" />
-            <element signature="e#48163#48669#0#PHP" expanded="false" />
-            <element signature="e#48946#49463#0#PHP" expanded="false" />
-            <element signature="e#50187#50424#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1248,7 +1172,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="78" column="20" lean-forward="false" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1284,7 +1207,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
           <caret line="488" column="20" lean-forward="false" selection-start-line="488" selection-start-column="20" selection-end-line="488" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1299,7 +1221,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
           <caret line="151" column="27" lean-forward="false" selection-start-line="151" selection-start-column="27" selection-end-line="151" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1314,7 +1235,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
           <caret line="688" column="27" lean-forward="false" selection-start-line="688" selection-start-column="27" selection-end-line="688" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1344,7 +1264,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-8198">
           <caret line="143" column="5" lean-forward="true" selection-start-line="143" selection-start-column="5" selection-end-line="143" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1352,7 +1271,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1367,7 +1285,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="840" column="9" lean-forward="false" selection-start-line="840" selection-start-column="9" selection-end-line="840" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1375,9 +1292,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="443" column="33" lean-forward="true" selection-start-line="443" selection-start-column="33" selection-end-line="443" selection-end-column="33" />
-          <folding>
-            <element signature="e#3769#3863#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1392,7 +1306,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1355">
           <caret line="523" column="20" lean-forward="false" selection-start-line="523" selection-start-column="20" selection-end-line="523" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1400,7 +1313,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
           <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1408,7 +1320,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="527" column="20" lean-forward="false" selection-start-line="527" selection-start-column="20" selection-end-line="527" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1416,7 +1327,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="245">
           <caret line="33" column="11" lean-forward="false" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1424,20 +1334,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="200" column="79" lean-forward="false" selection-start-line="200" selection-start-column="11" selection-end-line="200" selection-end-column="79" />
-          <folding>
-            <element signature="e#410#926#0#PHP" expanded="false" />
-            <element signature="e#932#5723#0#PHP" expanded="false" />
-            <element signature="e#1029#1573#0#PHP" expanded="false" />
-            <element signature="e#1029#1727#0#PHP" expanded="false" />
-            <element signature="e#1029#2184#0#PHP" expanded="false" />
-            <element signature="e#1029#2707#0#PHP" expanded="false" />
-            <element signature="e#1029#3226#0#PHP" expanded="false" />
-            <element signature="e#1029#4826#0#PHP" expanded="false" />
-            <element signature="e#1029#5680#0#PHP" expanded="false" />
-            <element signature="e#5729#6010#0#PHP" expanded="false" />
-            <element signature="e#6141#6249#0#PHP" expanded="false" />
-            <element signature="e#6354#6460#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1445,12 +1341,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="96" column="69" lean-forward="false" selection-start-line="96" selection-start-column="69" selection-end-line="96" selection-end-column="69" />
-          <folding>
-            <element signature="e#117#138#0#PHP" expanded="true" />
-            <element signature="e#434#1341#0#PHP" expanded="false" />
-            <element signature="e#1348#1986#0#PHP" expanded="false" />
-            <element signature="e#3397#3774#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1458,7 +1348,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1466,47 +1355,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="31" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Controller/Component/EventServicesComponent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="248" column="10" lean-forward="false" selection-start-line="248" selection-start-column="10" selection-end-line="248" selection-end-column="10" />
-          <folding>
-            <element signature="e#127#157#0#PHP" expanded="true" />
-            <element signature="e#1009#1939#0#PHP" expanded="false" />
-            <element signature="e#2476#2575#0#PHP" expanded="false" />
-            <element signature="e#6612#6945#0#PHP" expanded="false" />
-            <element signature="e#6798#6912#0#PHP" expanded="false" />
-            <element signature="e#6951#7236#0#PHP" expanded="false" />
-            <element signature="e#7242#7575#0#PHP" expanded="false" />
-            <element signature="e#7581#8755#0#PHP" expanded="false" />
-            <element signature="e#8761#8806#0#PHP" expanded="false" />
-            <element signature="e#8811#9237#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Entity/TimeLineEntity.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        <state relative-caret-position="323">
+          <caret line="24" column="1" lean-forward="false" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/EventsTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="40" column="35" lean-forward="true" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
-          <folding>
-            <element signature="e#118#140#0#PHP" expanded="false" />
-            <element signature="e#2012#3649#0#PHP" expanded="false" />
-            <element signature="e#3655#3991#0#PHP" expanded="false" />
-            <element signature="e#3997#6887#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1514,7 +1370,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
           <caret line="599" column="16" lean-forward="false" selection-start-line="599" selection-start-column="13" selection-end-line="599" selection-end-column="64" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1522,7 +1377,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
           <caret line="588" column="20" lean-forward="false" selection-start-line="588" selection-start-column="20" selection-end-line="588" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1530,7 +1384,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
           <caret line="159" column="20" lean-forward="false" selection-start-line="159" selection-start-column="20" selection-end-line="159" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1538,7 +1391,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1989">
           <caret line="133" column="24" lean-forward="true" selection-start-line="133" selection-start-column="24" selection-end-line="133" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1546,13 +1398,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
           <caret line="31" column="24" lean-forward="false" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/TimeLinesTable.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-307">
+        <state relative-caret-position="408">
           <caret line="31" column="43" lean-forward="false" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
           <folding />
         </state>
@@ -1566,34 +1417,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/ORM/Table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34442">
+          <caret line="2063" column="20" lean-forward="false" selection-start-line="2063" selection-start-column="20" selection-end-line="2063" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/tests/Fixture/TimeLineFixture.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="24" column="151" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="151" />
+          <caret line="24" column="151" lean-forward="false" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="151" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/EventsTimeLinesTable.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="44" column="23" lean-forward="false" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
+        <state relative-caret-position="147">
+          <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/ORM/Table.php">
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Controller/Component/EventServicesComponent.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="2063" column="20" lean-forward="false" selection-start-line="2063" selection-start-column="20" selection-end-line="2063" selection-end-column="20" />
-          <folding />
+        <state relative-caret-position="-224">
+          <caret line="289" column="21" lean-forward="false" selection-start-line="289" selection-start-column="21" selection-end-line="289" selection-end-column="21" />
+          <folding>
+            <element signature="e#127#157#0#PHP" expanded="true" />
+            <element signature="e#1009#1939#0#PHP" expanded="false" />
+            <element signature="e#2476#2575#0#PHP" expanded="false" />
+            <element signature="e#6612#6945#0#PHP" expanded="false" />
+            <element signature="e#6798#6912#0#PHP" expanded="false" />
+            <element signature="e#6951#7236#0#PHP" expanded="false" />
+            <element signature="e#7242#7575#0#PHP" expanded="false" />
+            <element signature="e#8761#8806#0#PHP" expanded="false" />
+            <element signature="e#8811#9237#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/src/Model/Table/EventsTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-82">
+          <caret line="40" column="35" lean-forward="true" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+          <folding>
+            <element signature="e#2250#2433#0#PHP" expanded="false" />
+            <element signature="e#2444#2681#0#PHP" expanded="false" />
+            <element signature="e#2692#3025#0#PHP" expanded="false" />
+            <element signature="e#3655#3991#0#PHP" expanded="false" />
+            <element signature="e#3997#6887#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/mustaphakd/cakephp-EventsManager/tests/TestCase/Controller/Component/EventServicesComponentTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-210">
-          <caret line="479" column="55" lean-forward="true" selection-start-line="479" selection-start-column="55" selection-end-line="479" selection-end-column="55" />
+        <state relative-caret-position="346">
+          <caret line="541" column="7" lean-forward="false" selection-start-line="541" selection-start-column="7" selection-end-line="541" selection-end-column="7" />
           <folding>
             <element signature="e#141#163#0#PHP" expanded="true" />
             <element signature="e#831#886#0#PHP" expanded="false" />
@@ -1626,18 +1509,20 @@
             <element signature="e#10562#11453#0#PHP" expanded="false" />
             <element signature="e#11459#12441#0#PHP" expanded="false" />
             <element signature="e#12447#13333#0#PHP" expanded="false" />
-            <element signature="e#15257#15715#0#PHP" expanded="false" />
-            <element signature="e#15722#16526#0#PHP" expanded="false" />
-            <element signature="e#16960#17955#1#PHP" expanded="false" />
-            <element signature="e#17967#18084#0#PHP" expanded="false" />
-            <element signature="e#18889#19366#0#PHP" expanded="false" />
-            <element signature="e#19372#19935#0#PHP" expanded="false" />
-            <element signature="e#19941#20344#0#PHP" expanded="false" />
-            <element signature="e#20350#20710#0#PHP" expanded="false" />
-            <element signature="e#20716#20983#0#PHP" expanded="false" />
-            <element signature="e#20989#22044#0#PHP" expanded="false" />
-            <element signature="e#21534#21683#0#PHP" expanded="false" />
-            <element signature="e#21718#21879#0#PHP" expanded="false" />
+            <element signature="e#13339#13775#0#PHP" expanded="false" />
+            <element signature="e#13781#14573#0#PHP" expanded="false" />
+            <element signature="e#14579#15919#0#PHP" expanded="false" />
+            <element signature="e#17608#18412#0#PHP" expanded="false" />
+            <element signature="e#18846#19841#1#PHP" expanded="false" />
+            <element signature="e#19853#19970#0#PHP" expanded="false" />
+            <element signature="e#20775#21252#0#PHP" expanded="false" />
+            <element signature="e#21258#21821#0#PHP" expanded="false" />
+            <element signature="e#21827#22230#0#PHP" expanded="false" />
+            <element signature="e#22236#22596#0#PHP" expanded="false" />
+            <element signature="e#22602#22869#0#PHP" expanded="false" />
+            <element signature="e#22875#23930#0#PHP" expanded="false" />
+            <element signature="e#23420#23569#0#PHP" expanded="false" />
+            <element signature="e#23604#23765#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

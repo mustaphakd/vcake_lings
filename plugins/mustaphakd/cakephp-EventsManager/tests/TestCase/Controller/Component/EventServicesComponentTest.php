@@ -496,12 +496,50 @@ class EventServicesComponentTest extends TestCase
 
     public function test_create_event_with_new_timeLine_succeed(){
 
+        $this->provisionTimeLines();
+
+        $newEvent = self::$ecowas_event;
+        $newTimeLines = self::$creation_timeLines;
+
+        $insertionResult = $this->component->insert_events([$newEvent], $newTimeLines);
+
+        $createdEvent = $insertionResult["events"]["entities"][0];
+        $createdTimeLines = $insertionResult["timelines"]["entities"];
+
+        $this->assertEquals($newEvent["title"], $createdEvent->title);
+        $this->assertEquals($newEvent["min_cost"], $createdEvent->min_cost);
+        $this->assertEquals($newEvent["end_date"], $createdEvent->end_date->format("yyyy-mm-dd"));
+
+        $this->assertCount(2, $createdTimeLines);
+
+        $foundEvent = $this->Events->get($createdEvent->id, ['contains' => "TimeLines"]);
+        $foundTimeLines = $foundEvent->TimeLines->toArray();
+        $foundCount = 0;
+
+        $this->assertCount(2, $foundTimeLines);
+
+        foreach ($foundTimeLines as $foundTimeLine){
+            foreach ($createdTimeLines as $createdTimeLine){
+                if($foundTimeLine->id === $createdTimeLine->id){
+                    $foundCount += 1;
+                    break;
+                }
+            }
+        }
+
+        $this->assertEquals(2, $foundCount, "EventServicesComponent failed to create all records");
     }
 
+    /**
+     * @depends test_create_event_with_new_timeLine_succeed
+     */
     public function test_create_event_with_newAndExisting_timeLine_succeed(){
 
     }
 
+    /**
+     * @depends test_create_event_with_new_timeLine_succeed
+     */
     public function test_create_event_with_existingEdited_timeLine_suceed(){
 
     }
@@ -536,6 +574,22 @@ class EventServicesComponentTest extends TestCase
         "video_path" => "http://youtube.com",
         "status" => "soon",
         "visible" => 'T'
+    ];
+
+    private static $creation_timeLines = [
+        [
+            "start" => "08:30 ",
+            "end" => "09:15",
+            "synopsys" => "brief description blah",
+            "image" => 'ffadf\fadfa\fasdfa.png',
+            "date_heading" => "day one"
+        ],
+        [
+            "start" => "09:30 ",
+            "end" => "11:00",
+            "synopsys" => "deuxieme description blah",
+            "image" => 'ffadf\fadfa\fasdfa2.png'
+        ]
     ];
 
     private function create_visible_events(){
