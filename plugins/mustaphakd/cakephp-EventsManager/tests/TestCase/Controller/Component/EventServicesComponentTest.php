@@ -534,14 +534,82 @@ class EventServicesComponentTest extends TestCase
      * @depends test_create_event_with_new_timeLine_succeed
      */
     public function test_create_event_with_newAndExisting_timeLine_succeed(){
+        //$this->provisionResellers();  //to be enabled if eventResellerTable does not exist
+        $this->provisionTimeLines();
+        $this->TimeLines->newEntities(self::$creation_timeLines);
 
+        $existingTimelines = $this->TimeLines->find()->toArray();
+        $firstExistingTimeLine = $existingTimelines[0];
+        $secondExistingTimeLine  = $existingTimelines[1];
+
+        $newTimeline = ["start" => "13:30 ", "end" => "15:30", "synopsys" => "brief description blah", "image" => 'ffadf\fadfa\ttydfa.png'];
+
+        $insertionResult = $this->component->insert_events(
+            [self::$ecowas_event],
+            [
+                ["id" => $firstExistingTimeLine->id],
+                ["id" => $secondExistingTimeLine->id],
+                $newTimeline
+            ]);
+
+        $eventNotNull = $insertionResult["events"]["entities"][0];
+        $eventTimelines = $insertionResult["timelines"]["entities"];
+
+        $this->assertNull($eventNotNull);
+        $this->assertCount(3, $eventTimelines);
+
+        $foundEvent = $this->Events->get($eventNotNull->id, ["contains" => ["Timelines"]]);
+
+        $this->assertCount(3, $foundEvent->timelines);
     }
 
     /**
      * @depends test_create_event_with_new_timeLine_succeed
      */
     public function test_create_event_with_existingEdited_timeLine_suceed(){
+        //$this->provisionResellers();  //to be enabled if eventResellerTable does not exist
+        $this->provisionTimeLines();
+        $this->TimeLines->newEntities(self::$creation_timeLines);
 
+        $existingTimelines = $this->TimeLines->find()->toArray();
+        $firstExistingTimeLine = $existingTimelines[0];
+        $secondExistingTimeLine  = $existingTimelines[1];
+
+        $secondTimelineTime = Time::parseTime($secondExistingTimeLine->start);
+        $secondTimelineTime->addMinute(13);
+        $editedSecondTimelineTime = $secondTimelineTime->format("H:mm:ss");
+
+        $insertionResult = $this->component->insert_events(
+            [self::$ecowas_event],
+            [
+                ["id" => $firstExistingTimeLine->id],
+                ["id" => $secondExistingTimeLine->id, "start" => $editedSecondTimelineTime]
+            ]);
+
+        $eventNotNull = $insertionResult["events"]["entities"][0];
+        $eventTimelines = $insertionResult["timelines"]["entities"];
+
+        $foundUpdatedTimeline = $this->TimeLines->get($secondTimelineTime->id);
+
+        $foundUpdatedTimelineProperlyUpdated = false;
+
+        if (
+            $foundUpdatedTimeline->id === $secondTimelineTime->id &&
+            $foundUpdatedTimeline->end === $secondTimelineTime->end &&
+            $foundUpdatedTimeline->synopsys === $secondTimelineTime->synopsys &&
+            $foundUpdatedTimeline->image === $secondTimelineTime->image &&
+            $foundUpdatedTimeline->start !== $secondTimelineTime->start
+        ){
+            $foundUpdatedTimelineProperlyUpdated = true;
+        }
+
+        $this->assertNull($eventNotNull);
+        $this->assertCount(2, $eventTimelines);
+
+        $foundEvent = $this->Events->get($eventNotNull->id, ["contains" => ["Timelines"]]);
+
+        $this->assertCount(2, $foundEvent->timelines);
+        $this->assertTrue($foundUpdatedTimelineProperlyUpdated, "Mishap existing timeline start property not updated");
     }
 
     public function test_create_event_with_newAndExisting_images_succeed(){
